@@ -259,13 +259,10 @@
     <!-- My Best Buy Exclusive Banner -->
     <div class="myBestBuyBanner">
         <div class="bannerContent">
-            <p><strong>Mở khóa ưu đãi độc quyền.</strong> Đăng nhập tài khoản My Best Buy để nhận những ưu đãi dành riêng cho bạn.</p>
+            <p><strong>Mở khóa ưu đãi độc quyền.</strong></p>
             <a href="#" class="bannerLink">Khám phá ưu đãi <i class="fa-solid fa-chevron-right"></i></a>
         </div>
-        <div class="bannerLogo">
-            <span>my</span>
-            <strong>BEST BUY</strong>
-        </div>
+       
     </div>
 </section>
 
