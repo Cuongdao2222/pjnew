@@ -1,0 +1,289 @@
+/* Apple Promo Section */
+.applePromoContainer {
+    max-width: 1200px;
+    margin: 24px auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.promoBentoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.promoCard {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.darkTheme { background-color: #000; color: #fff; }
+.blueGradient { background: linear-gradient(135deg, #1844b9 0%, #0c2b7a 100%); color: #fff; }
+.purpleGradient { background: linear-gradient(135deg, #501d8a 0%, #290a4e 100%); color: #fff; }
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.largeCard { text-align: center; }
+.largeCard .cardMainContent h2 { font-size: 38px; font-weight: 700; margin-bottom: 12px; }
+.largeCard .cardMainContent p { font-size: 14px; opacity: 0.85; max-width: 380px; margin: 0 auto 24px auto; line-height: 1.4; }
+.largeCard .cardImageContainer img { max-height: 260px; object-fit: contain; width: 100%; }
+
+.btnBlue { display: inline-block; background-color: #0046be; color: #fff; padding: 10px 24px; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 14px; }
+.btnWhiteOutline { display: inline-block; background-color: transparent; color: #fff; border: 1px solid #fff; padding: 8px 18px; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 13px; }
+.btnWhite { display: inline-block; background-color: #fff; color: #000; padding: 8px 18px; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 13px; margin-top: 16px; }
+
+.promoRightStack { display: flex; flex-direction: column; gap: 20px; }
+.mediumCard { flex-direction: row; align-items: center; padding: 24px; }
+.mediumCard .cardLeftText { flex: 1; }
+.mediumCard h3 { font-size: 24px; margin-bottom: 8px; }
+.mediumCard p { font-size: 13px; opacity: 0.8; margin-bottom: 16px; }
+.mediumCard .cardImageContainer { flex: 1; text-align: right; }
+.mediumCard .cardImageContainer img { max-height: 140px; object-fit: contain; width: 100%; }
+
+.promoSmallGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.smallCard { padding: 24px; min-height: 160px; }
+
+.exploreSection > h3 { font-size: 24px; color: #1d252c; margin-bottom: 20px; text-align: center; }
+.exploreGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.exploreItem { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; }
+.exploreHeader { font-size: 13px; font-weight: bold; color: #1d252c; display: flex; align-items: center; gap: 6px; margin-bottom: 12px; }
+.exploreImg { text-align: center; margin-bottom: 16px; }
+.exploreImg img { max-height: 120px; width: auto; object-fit: contain; }
+.exploreItem p { font-size: 12px; color: #55606a; line-height: 1.4; }
+
+/* Hottest Offers */
+.hottestOffersContainer {
+    background: linear-gradient(180deg, #0443ac 0%, #1077b9 100%);
+    padding: 40px 16px;
+    color: #ffffff;
+}
+.hottestOffersWrapper { max-width: 1200px; margin: 0 auto; }
+.hottestOffersContainer .sectionTitle { font-size: 26px; font-weight: 800; text-align: center; margin-bottom: 28px; }
+
+.offersGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.offerCard { display: flex; flex-direction: column; }
+.offerImgHolder { background-color: #ffffff; border-radius: 10px; height: 180px; display: flex; align-items: center; justify-content: center; padding: 16px; margin-bottom: 16px; }
+.offerImgHolder.imgGradient { background: linear-gradient(135deg, #1c66e5 0%, #20b8e5 100%); }
+.offerImgHolder img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.offerContent { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.offerTitle { font-size: 15px; font-weight: 700; color: #ffffff; }
+.offerSubtext { font-size: 13px; opacity: 0.9; }
+.offerLink { color: #ffffff; font-size: 13.5px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: auto; }
+
+/* Category Grid */
+.shopByCategoryContainer { background-color: #ffffff; padding: 48px 16px 24px 16px; }
+.shopByCategoryWrapper { max-width: 1200px; margin: 0 auto 48px auto; }
+.categorySectionTitle { font-size: 26px; font-weight: 800; color: #1d252c; text-align: center; margin-bottom: 36px; }
+
+.categoryGrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 32px 16px; }
+.categoryItem { display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none; color: #0046be; }
+.categoryImgBox { width: 100%; height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+.categoryImgBox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.categoryItem span { font-size: 13px; font-weight: 500; color: #0046be; }
+
+.myBestBuyBanner {
+    background: linear-gradient(90deg, #0d3880 0%, #1742a0 100%);
+    color: #ffffff; padding: 16px 24px; max-width: 1200px; margin: 0 auto; border-radius: 4px;
+    display: flex; align-items: center; justify-content: space-between;
+}
+.bannerContent { display: flex; align-items: center; gap: 24px; }
+.bannerLink { color: #ffffff; font-weight: bold; font-size: 14px; text-decoration: none; }
+.bannerLogo { display: flex; flex-direction: column; align-items: flex-end; }
+.bannerLogo strong { background-color: #fff200; color: #000; padding: 2px 4px; }
+
+/* Rate Plans */
+.ratePlansContainer { background-color: #ffffff; padding: 48px 16px; }
+.ratePlansWrapper { max-width: 1200px; margin: 0 auto; text-align: center; }
+.plansTitle { font-size: 26px; font-weight: 800; margin-bottom: 8px; }
+.plansSubtext { font-size: 14px; color: #55606a; margin-bottom: 24px; }
+.btnExplorePlans { display: inline-block; background-color: #0046be; color: #ffffff; font-weight: 700; padding: 10px 24px; border-radius: 4px; text-decoration: none; }
+
+.plansGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: left; margin-top: 32px; }
+.planImgBox { height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.planImgBox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.planCard h3 { font-size: 15px; font-weight: 800; margin-bottom: 8px; }
+.planCard p { font-size: 13px; color: #55606a; }
+
+/* More Deals */
+.moreDealsContainer { background-color: #ffffff; padding: 40px 16px; }
+.moreDealsWrapper { max-width: 1200px; margin: 0 auto; }
+.dealsTitle { font-size: 24px; font-weight: 800; text-align: center; margin-bottom: 32px; }
+.dealsCarouselHolder { position: relative; }
+.dealsGrid { display: flex; gap: 16px; overflow-x: auto; scrollbar-width: none; padding-bottom: 8px; }
+.dealsGrid::-webkit-scrollbar { display: none; }
+
+.productCard { min-width: 180px; flex: 0 0 auto; display: flex; flex-direction: column; justify-content: space-between; }
+.productImgBox { background-color: #f4f6f8; border-radius: 8px; height: 140px; display: flex; align-items: center; justify-content: center; padding: 12px; margin-bottom: 12px; }
+.productImgBox img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.productName { font-size: 12px; line-height: 1.35; height: 48px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.productRating { display: flex; align-items: center; gap: 4px; }
+.stars { color: #f2a900; font-size: 11px; }
+.ratingCount { font-size: 11px; color: #0046be; }
+.saveBadge { color: #bb0628; font-weight: 800; font-size: 11px; }
+.productPrice { font-size: 16px; font-weight: 800; }
+
+.carouselArrow {
+    position: absolute; right: -16px; top: 35%; transform: translateY(-50%);
+    width: 40px; height: 40px; border-radius: 50%; background-color: #ffffff;
+    border: 1px solid #d1d5db; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    display: flex; align-items: center; justify-content: center; color: #0046be; cursor: pointer; z-index: 2;
+}
+
+/* Feature Promo Banners */
+.promoBannersContainer { max-width: 1200px; margin: 0 auto 48px auto; padding: 0 16px; display: flex; flex-direction: column; gap: 32px; }
+.featureBannerCard { border-radius: 12px; padding: 32px; display: flex; align-items: center; gap: 32px; color: #ffffff; }
+.btsGradient { background: linear-gradient(135deg, #3d0c92 0%, #203bb0 50%, #4a19b0 100%); }
+.techGradient { background: linear-gradient(135deg, #270678 0%, #0d2891 50%, #1754ba 100%); }
+
+.bannerInfoCol { width: 240px; flex-shrink: 0; }
+.bannerTitle { font-size: 28px; font-weight: 800; line-height: 1.15; margin-bottom: 12px; }
+.bannerDesc { font-size: 14px; opacity: 0.9; margin-bottom: 20px; }
+.btnBannerWhite { display: inline-block; background-color: #ffffff; color: #000; font-weight: 700; font-size: 13px; padding: 10px 20px; border-radius: 4px; text-decoration: none; }
+
+.bannerCarouselCol { flex: 1; display: flex; align-items: center; gap: 12px; }
+.bannerProductsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; width: 100%; }
+.bannerProductCard { background-color: #ffffff; border-radius: 8px; padding: 12px; color: #1d252c; display: flex; flex-direction: column; justify-content: space-between; height: 240px; }
+.cardImgHolder { height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+.cardImgHolder img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.prodTitle { font-size: 11px; line-height: 1.3; height: 28px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.badgeSave { color: #bb0628; font-weight: 800; font-size: 10px; }
+.prodPrice { font-size: 14px; font-weight: 800; }
+.bannerNavBtn { width: 32px; height: 32px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.3); border: none; color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; }
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================= */
+
+@media (max-width: 1200px) {
+    .applePromoContainer,
+    .hottestOffersWrapper,
+    .shopByCategoryWrapper,
+    .ratePlansWrapper,
+    .moreDealsWrapper,
+    .promoBannersContainer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .exploreGrid,
+    .offersGrid,
+    .plansGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .categoryGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bannerProductsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .promoBentoGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .featureBannerCard {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 24px;
+    }
+
+    .bannerInfoCol {
+        width: 100%;
+    }
+
+    .categoryGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mediumCard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mediumCard .cardImageContainer {
+        text-align: center;
+        width: 100%;
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .exploreGrid,
+    .offersGrid,
+    .plansGrid,
+    .promoSmallGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .categoryGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 12px;
+    }
+
+    .bannerProductsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .myBestBuyBanner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .bannerContent {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .bannerLogo {
+        align-items: flex-start;
+    }
+
+    .largeCard .cardMainContent h2 {
+        font-size: 28px;
+    }
+
+    .sectionTitle,
+    .categorySectionTitle,
+    .plansTitle,
+    .dealsTitle,
+    .bannerTitle {
+        font-size: 22px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .categoryGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .promoCard {
+        padding: 20px;
+    }
+
+    .mediumCard {
+        padding: 20px;
+    }
+}

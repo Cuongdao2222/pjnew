@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Samsung Galaxy Tab A11+ (Plus)",
+        "slug": "samsung-galaxy-tab-a11-plus",
+        "code": "SM-X230NZAAXAC",
+        "price": 269.99,
+        "images": [
+            "https://cdn11.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture//Apro/Apro_product_37067/samsung-galaxy-tab-a11-4gb64gb-main-328261.webp",
+            "https://cdn11.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture//Apro/Apro_product_37688/samsung-galaxy-s26-ultra-5g-12gb256gb-main--502.png",
+            "https://cdn11.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture//Apro/Apro_color_2823/samsung-galaxy-_main_458_1020.png.webp"
+        ],
+        "overview": "Stay productive and entertained on the go with the Samsung Galaxy Tab A11+ (Plus) Android tablet. Its MediaTek MT8775 processor and 6GB memory deliver fast, seamless performance. From playlists to movies, Dolby-engineered quad speakers offer crisp, clear, and engaging audio that draws you in.",
+        "description": "The Samsung Galaxy Tab A11+ is designed for versatility, whether for work or play. With a bright, clear display and powerful audio, it's perfect for media consumption."
+    },
+    {
+        "id": 2,
+        "name": "MacBook Pro 16",
+        "slug": "macbook-pro-16",
+        "code": "MBP16-2019",
+        "price": 749.77,
+        "images": [
+            "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6418/6418601_sd.jpg;maxHeight=300;maxWidth=300",
+            "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6418/6418601_sd.jpg;maxHeight=300;maxWidth=300",
+            "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6418/6418601_sd.jpg;maxHeight=300;maxWidth=300"
+        ],
+        "overview": "The 16-inch MacBook Pro delivers powerful performance for demanding creative workflows, featuring high-end processing, advanced thermal management, and a stunning Retina display.",
+        "description": "Experience professional-grade power in a portable form factor with the MacBook Pro 16."
+    },
+    {
+        "id": 3,
+        "name": "Dell 15.6 Laptop",
+        "slug": "dell-15-6-laptop",
+        "code": "DELL156-BLK",
+        "price": 549.99,
+        "images": [
+            "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6535/6535329_sd.jpg;maxHeight=300;maxWidth=300",
+            "https://via.placeholder.com/480x360/333/fff?text=Dell+2",
+            "https://via.placeholder.com/480x360/333/fff?text=Dell+3"
+        ],
+        "overview": "Reliable and efficient, this Dell 15.6 inch laptop is perfect for daily tasks, student projects, or business needs, offering a balanced mix of performance and portability.",
+        "description": "A versatile laptop designed to handle your daily computing needs with ease."
+    }
+]
