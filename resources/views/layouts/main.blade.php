@@ -16,6 +16,7 @@
             <div class="upperToolbar">
                 <nav aria-label="Trạng thái đơn hàng, Blog, Best Buy Doanh nghiệp và Tiếng Pháp">
                     <ul class="navList">
+                        <li><a href="{{ url('/backend/product/create') }}">Quản trị</a></li>
                         <li><a href="#">Trạng thái đơn hàng</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Doanh nghiệp</a></li>

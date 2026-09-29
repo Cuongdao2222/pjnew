@@ -18,3 +18,8 @@ Route::get('/cart', 'BlogController@viewCart');
 Route::get('/suggest', 'BlogController@suggest');
 Route::post('/add-to-cart', 'BlogController@addToCart');
 Route::get('/get-cart-count', 'BlogController@getCartCount');
+
+Route::group(['prefix' => 'backend'], function () {
+    Route::get('/product/create', 'BackendController@create');
+    Route::post('/product/store', 'BackendController@store');
+});
