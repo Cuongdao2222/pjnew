@@ -580,3 +580,57 @@
     color: #444;
     line-height: 1.5;
 }
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES FOR DETAIL PAGE
+   ========================================= */
+
+@media (max-width: 992px) {
+    .pdpLayout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContent {
+        padding: 0 16px;
+        margin: 16px auto 32px;
+    }
+
+    .pdpGallery {
+        flex-direction: column-reverse; /* Thumbnails below main image on mobile */
+        gap: 12px;
+    }
+
+    .thumbList {
+        flex-direction: row; /* Horizontal thumbnail slider */
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    .thumbList::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .thumbList::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 2px;
+    }
+
+    .thumbItem {
+        width: 56px;
+        height: 56px;
+        flex-shrink: 0;
+    }
+
+    .mainImageWrap {
+        min-height: 280px;
+        padding: 16px;
+    }
+
+    .mainProductImg {
+        max-height: 260px;
+    }
+}
