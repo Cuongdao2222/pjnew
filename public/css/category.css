@@ -461,3 +461,44 @@
     color: #067d62;
     font-weight: 600;
 }
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES FOR CATEGORY PAGE
+   ========================================= */
+
+@media (max-width: 1200px) {
+    .productGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .listingLayout {
+        flex-direction: column;
+    }
+
+    .filterSidebar {
+        width: 100%;
+    }
+
+    .productGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .productGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .listingToolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toolbarControls {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+    }
+}

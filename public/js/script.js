@@ -164,4 +164,71 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+    // Category Page Sorting & Filtering Logic (In Stock, Best Buy Only, Sort Options)
+    const productGrid = document.querySelector('.productGrid');
+    if (productGrid) {
+        const cards = Array.from(productGrid.querySelectorAll('.productCard'));
+        const toggleLabels = document.querySelectorAll('.listingToolbar .toggleLabel');
+        
+        let inStockCheckbox = null;
+        let bestBuyCheckbox = null;
+
+        toggleLabels.forEach(label => {
+            const spanText = label.querySelector('span').textContent.trim();
+            const input = label.querySelector('.toggleInput');
+            if (spanText === 'In Stock') {
+                inStockCheckbox = input;
+            } else if (spanText === 'Best Buy Only') {
+                bestBuyCheckbox = input;
+            }
+        });
+
+        const sortSelect = document.querySelector('.sortControl select');
+
+        function applyFilterAndSort() {
+            let sortedCards = [...cards];
+
+            const inStockChecked = inStockCheckbox ? inStockCheckbox.checked : false;
+            const bestBuyChecked = bestBuyCheckbox ? bestBuyCheckbox.checked : false;
+            const sortVal = sortSelect ? sortSelect.value : 'Best Match';
+
+            sortedCards.sort((a, b) => {
+                const qtyA = parseFloat(a.dataset.quantity) || 0;
+                const qtyB = parseFloat(b.dataset.quantity) || 0;
+                const rateA = parseFloat(a.dataset.rating) || 0;
+                const rateB = parseFloat(b.dataset.rating) || 0;
+                const priceA = parseFloat(a.dataset.price) || 0;
+                const priceB = parseFloat(b.dataset.price) || 0;
+
+                // 1. In Stock: Sắp xếp sản phẩm có số lượng lớn lên đầu
+                if (inStockChecked) {
+                    if (qtyB !== qtyA) return qtyB - qtyA;
+                }
+
+                // 2. Best Buy Only: Sắp xếp sản phẩm có số sao cao lên đầu
+                if (bestBuyChecked) {
+                    if (rateB !== rateA) return rateB - rateA;
+                }
+
+                // 3. Sort Option
+                if (sortVal === 'Price Low to High') {
+                    return priceA - priceB;
+                } else if (sortVal === 'Price High to Low') {
+                    return priceB - priceA;
+                } else if (sortVal === 'Highest Rated') {
+                    return rateB - rateA;
+                }
+
+                return 0; // Best Match (Default)
+            });
+
+            productGrid.innerHTML = '';
+            sortedCards.forEach(card => productGrid.appendChild(card));
+        }
+
+        if (inStockCheckbox) inStockCheckbox.addEventListener('change', applyFilterAndSort);
+        if (bestBuyCheckbox) bestBuyCheckbox.addEventListener('change', applyFilterAndSort);
+        if (sortSelect) sortSelect.addEventListener('change', applyFilterAndSort);
+    }
 });

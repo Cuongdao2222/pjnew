@@ -193,7 +193,7 @@
             <!-- Product Grid -->
             <div class="productGrid">
                 @foreach($products as $product)
-                <article class="productCard">
+                <article class="productCard" data-price="{{ $product['price'] }}" data-quantity="{{ $product['quantity'] ?? 100 }}" data-rating="{{ $product['rating'] ?? 5 }}">
                     <div class="productImageWrap">
                         <img src="{{ $product['images'][0] }}" alt="{{ $product['name'] }}">
                     </div>
@@ -202,8 +202,16 @@
                             <a href="{{ url('/detail/' . $product['slug']) }}">{{ $product['name'] }}</a>
                         </h3>
                         <div class="productRating">
-                            <span class="stars">★★★★★</span>
-                            <span class="ratingCount">(128)</span>
+                            <span class="stars">
+                                @php
+                                    $rating = $product['rating'] ?? 5;
+                                    $fullStars = floor($rating);
+                                @endphp
+                                @for($i = 1; $i <= 5; $i++)
+                                    @if($i <= $fullStars) ★ @else ☆ @endif
+                                @endfor
+                            </span>
+                            <span class="ratingCount">({{ $product['rating'] ?? 5 }})</span>
                         </div>
                         <div class="productPrice">
                             <span class="currentPrice">${{ number_format($product['price'], 2) }}</span>
@@ -211,7 +219,7 @@
                                 <span class="saveBadge">SAVE ${{ number_format($product['old_price'] - $product['price'], 2) }}</span>
                             @endif
                         </div>
-                        <p class="availability">Available Online</p>
+                        <p class="availability">Available Online (SL: {{ $product['quantity'] ?? 100 }})</p>
                         <button class="btnAddToCart" data-id="{{ $product['id'] }}">
                             <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                         </button>
