@@ -17,19 +17,15 @@
                 <i class="fa-solid fa-chevron-up"></i>
             </div>
             <ul class="categoryList">
-                <li><a href="#">Laptops & MacBooks <span>14,266</span></a></li>
-                <li><a href="#">Desktop Computers <span>7,079</span></a></li>
-                <li><a href="#">Tablets & iPads <span>2,866</span></a></li>
-                <li><a href="#">Handheld Gaming PCs <span>156</span></a></li>
-                <li><a href="#">Computer Accessories <span>119,889</span></a></li>
-                <li><a href="#">Tablet & iPad Accessories <span>13,084</span></a></li>
-                <li><a href="#">Hard Drives & Storage Devices <span>3,361</span></a></li>
-                <li><a href="#">PC Components <span>6,845</span></a></li>
-                <li><a href="#">Wi-Fi and Networking <span>9,466</span></a></li>
-                <li><a href="#">Printers, Scanners & Fax <span>2,577</span></a></li>
-                <li><a href="#">Monitors <span>2,368</span></a></li>
-                <li><a href="#">Software <span>723</span></a></li>
-                <li><a href="#">Servers & Accessories <span>101</span></a></li>
+                @if(isset($categories) && count($categories) > 0)
+                    @foreach($categories as $cat)
+                    <li>
+                        <a href="{{ url('/category/' . $cat['slug']) }}" @if(isset($slug) && $slug == $cat['slug']) style="font-weight:700; color:#0046be;" @endif>
+                            {{ $cat['tên'] }}
+                        </a>
+                    </li>
+                    @endforeach
+                @endif
             </ul>
         </div>
 

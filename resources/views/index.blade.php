@@ -123,136 +123,18 @@
     <div class="shopByCategoryWrapper">
         <h2 class="categorySectionTitle">Mua sắm theo danh mục</h2>
 
-        <!-- Grid 18 danh mục (6 cột x 3 hàng) -->
+        <!-- Grid danh mục từ categories.json -->
         <div class="categoryGrid">
-            <!-- Row 1 -->
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=300&q=80" alt="Apple">
-                </div>
-                <span>Apple</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&q=80" alt="TVs, Home Theatre">
-                </div>
-                <span>Tivi, Rạp hát tại gia & Phụ kiện</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80" alt="Computers and Tablets">
-                </div>
-                <span>Máy tính & Máy tính bảng</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=300&q=80" alt="Computer Accessories">
-                </div>
-                <span>Phụ kiện máy tính</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=300&q=80" alt="Headphones and Speakers">
-                </div>
-                <span>Tai nghe & Loa di động</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=300&q=80" alt="Wearable Technology">
-                </div>
-                <span>Thiết bị đeo thông minh</span>
-            </a>
-
-            <!-- Row 2 -->
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=300&q=80" alt="Cell Phones">
-                </div>
-                <span>Điện thoại & Phụ kiện</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&q=80" alt="Major Appliances">
-                </div>
-                <span>Thiết bị gia dụng lớn</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=300&q=80" alt="Small Kitchen Appliances">
-                </div>
-                <span>Đồ gia dụng nhà bếp</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300&q=80" alt="Vacuums">
-                </div>
-                <span>Máy hút bụi</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=300&q=80" alt="Video Games">
-                </div>
-                <span>Video Game, Máy chơi game & Phụ kiện</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=300&q=80" alt="PC Gaming">
-                </div>
-                <span>PC Gaming</span>
-            </a>
-
-            <!-- Row 3 -->
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=300&q=80" alt="Smart Home">
-                </div>
-                <span>Nhà thông minh</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=300&q=80" alt="Cooling and Air Quality">
-                </div>
-                <span>Làm mát & Lọc không khí</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300&q=80" alt="Personal Care">
-                </div>
-                <span>Chăm sóc cá nhân</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&q=80" alt="Travel and Luggage">
-                </div>
-                <span>Du lịch, Vali & Túi xách</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=300&q=80" alt="Toys and Games">
-                </div>
-                <span>Đồ chơi & Thiết bị học tập</span>
-            </a>
-
-            <a href="{{ url('/category') }}" class="categoryItem">
-                <div class="categoryImgBox">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&q=80" alt="Furniture">
-                </div>
-                <span>Nội thất</span>
-            </a>
+            @if(isset($categories) && count($categories) > 0)
+                @foreach($categories as $category)
+                <a href="{{ url('/category/' . $category['slug']) }}" class="categoryItem">
+                    <div class="categoryImgBox">
+                        <img src="{{ $category['đường dẫn ảnh'] }}" alt="{{ $category['tên'] }}">
+                    </div>
+                    <span>{{ $category['tên'] }}</span>
+                </a>
+                @endforeach
+            @endif
         </div>
     </div>
 

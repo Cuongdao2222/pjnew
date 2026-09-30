@@ -11,7 +11,8 @@
             "https://cdn11.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture//Apro/Apro_color_2823/samsung-galaxy-_main_458_1020.png.webp"
         ],
         "overview": "Stay productive and entertained on the go with the Samsung Galaxy Tab A11+ (Plus) Android tablet. Its MediaTek MT8775 processor and 6GB memory deliver fast, seamless performance. From playlists to movies, Dolby-engineered quad speakers offer crisp, clear, and engaging audio that draws you in.",
-        "description": "The Samsung Galaxy Tab A11+ is designed for versatility, whether for work or play. With a bright, clear display and powerful audio, it's perfect for media consumption."
+        "description": "The Samsung Galaxy Tab A11+ is designed for versatility, whether for work or play. With a bright, clear display and powerful audio, it's perfect for media consumption.",
+        "category": "may-tinh-bang"
     },
     {
         "id": 2,
@@ -25,7 +26,8 @@
             "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6418/6418601_sd.jpg;maxHeight=300;maxWidth=300"
         ],
         "overview": "The 16-inch MacBook Pro delivers powerful performance for demanding creative workflows, featuring high-end processing, advanced thermal management, and a stunning Retina display.",
-        "description": "Experience professional-grade power in a portable form factor with the MacBook Pro 16."
+        "description": "Experience professional-grade power in a portable form factor with the MacBook Pro 16.",
+        "category": "laptop"
     },
     {
         "id": 3,
@@ -39,6 +41,621 @@
             "https://via.placeholder.com/480x360/333/fff?text=Dell+3"
         ],
         "overview": "Reliable and efficient, this Dell 15.6 inch laptop is perfect for daily tasks, student projects, or business needs, offering a balanced mix of performance and portability.",
-        "description": "A versatile laptop designed to handle your daily computing needs with ease."
+        "description": "A versatile laptop designed to handle your daily computing needs with ease.",
+        "category": "laptop"
+    },
+    {
+        "id": 4,
+        "name": "Samsung 65\" 4K UHD HDR Smart TV",
+        "slug": "samsung-65-4k-uhd-smart-tv",
+        "code": "UN65DU7200",
+        "price": 799.99,
+        "images": [
+            "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&q=80",
+            "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&q=80",
+            "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&q=80"
+        ],
+        "overview": "Experience stunning 4K resolution and vibrant colors with Crystal Processor 4K. Stream your favorite content with smart TV features.",
+        "description": "Transform your living room into a private theater with Samsung's 65-inch 4K UHD Smart TV.",
+        "category": "tivi"
+    },
+    {
+        "id": 5,
+        "name": "Sony Bravia 55\" OLED 4K Smart Google TV",
+        "slug": "sony-bravia-55-oled-smart-tv",
+        "code": "XR-55A80L",
+        "price": 1299.99,
+        "images": [
+            "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&q=80",
+            "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&q=80"
+        ],
+        "overview": "Pure black contrast and lifelike brightness powered by Cognitive Processor XR.",
+        "description": "Sony Bravia OLED TV delivers breathtaking realism and immersive sound.",
+        "category": "tivi"
+    },
+    {
+        "id": 6,
+        "name": "LG 50\" NanoCell 4K UHD Smart TV",
+        "slug": "lg-50-nanocell-4k-smart-tv",
+        "code": "50NANO82",
+        "price": 499.99,
+        "images": [
+            "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&q=80"
+        ],
+        "overview": "NanoCell technology delivers pure colors by filtering out dull colors.",
+        "description": "Enjoy crisp 4K picture quality and webOS smart platform.",
+        "category": "tivi"
+    },
+    {
+        "id": 7,
+        "name": "Samsung French Door Refrigerator 28 cu. ft.",
+        "slug": "samsung-french-door-refrigerator",
+        "code": "RF28R7201SR",
+        "price": 1899.99,
+        "images": [
+            "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&q=80"
+        ],
+        "overview": "Spacious French door refrigerator with modern design and Twin Cooling Plus technology.",
+        "description": "Keep your groceries fresh longer with precise temperature control and ample storage space.",
+        "category": "tu-lanh"
+    },
+    {
+        "id": 8,
+        "name": "Whirlpool Side-by-Side Refrigerator 25 cu. ft.",
+        "slug": "whirlpool-side-by-side-refrigerator",
+        "code": "WRS325SDHZ",
+        "price": 1499.99,
+        "images": [
+            "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&q=80"
+        ],
+        "overview": "Side-by-side refrigerator with sleek stainless steel finish and adjustable door bins.",
+        "description": "Organize your food easily with intuitive shelving and in-door ice maker.",
+        "category": "tu-lanh"
+    },
+    {
+        "id": 9,
+        "name": "LG Top Freezer Refrigerator 20 cu. ft.",
+        "slug": "lg-top-freezer-refrigerator",
+        "code": "LTCS20036S",
+        "price": 899.99,
+        "images": [
+            "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&q=80"
+        ],
+        "overview": "Energy-efficient top freezer refrigerator with smart cooling system.",
+        "description": "Reliable cooling performance for compact or standard kitchens.",
+        "category": "tu-lanh"
+    },
+    {
+        "id": 10,
+        "name": "LG Front Load Washer 5.2 cu. ft.",
+        "slug": "lg-front-load-washer",
+        "code": "WM4000HWA",
+        "price": 999.99,
+        "images": [
+            "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=300&q=80"
+        ],
+        "overview": "TurboWash 360 technology cleans clothes in under 30 minutes with AI DD sensor.",
+        "description": "High capacity front load washer with steam cleaning and smart connectivity.",
+        "category": "may-giat"
+    },
+    {
+        "id": 11,
+        "name": "Samsung Top Load Washer 5.0 cu. ft.",
+        "slug": "samsung-top-load-washer",
+        "code": "WA50R5400AV",
+        "price": 799.99,
+        "images": [
+            "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=300&q=80"
+        ],
+        "overview": "ActiveWater Jet built-in faucet for pre-treating stains easily.",
+        "description": "Large capacity top load washer designed for quiet and efficient washing.",
+        "category": "may-giat"
+    },
+    {
+        "id": 12,
+        "name": "Whirlpool Smart Front Load Washer",
+        "slug": "whirlpool-smart-front-load-washer",
+        "code": "WFW5620HW",
+        "price": 1099.99,
+        "images": [
+            "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=300&q=80"
+        ],
+        "overview": "Load & Go dispensing system holds enough detergent for 20 loads.",
+        "description": "Control your laundry remotely with smartphone app integration.",
+        "category": "may-giat"
+    },
+    {
+        "id": 13,
+        "name": "LG Dual Inverter Window Air Conditioner 12,000 BTU",
+        "slug": "lg-dual-inverter-window-ac",
+        "code": "LW1222IVSM",
+        "price": 549.99,
+        "images": [
+            "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=300&q=80"
+        ],
+        "overview": "Whisper quiet operation and 40% energy savings with Dual Inverter compressor.",
+        "description": "Cool your room rapidly and efficiently with smart Wi-Fi control.",
+        "category": "dieu-hoa"
+    },
+    {
+        "id": 14,
+        "name": "Frigidaire Cool Connect Smart Window AC 10,000 BTU",
+        "slug": "frigidaire-smart-window-ac",
+        "code": "FHWC104WB1",
+        "price": 449.99,
+        "images": [
+            "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=300&q=80"
+        ],
+        "overview": "Multi-speed fan and multi-directional air flow for even cooling.",
+        "description": "Manage home climate anywhere using voice commands or mobile app.",
+        "category": "dieu-hoa"
+    },
+    {
+        "id": 15,
+        "name": "Midea Inverter Portable Air Conditioner 14,000 BTU",
+        "slug": "midea-inverter-portable-ac",
+        "code": "MAP14S1TBL",
+        "price": 499.99,
+        "images": [
+            "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=300&q=80"
+        ],
+        "overview": "Portable comfort with 3-in-1 functionality (Cool, Fan, Dehumidifier).",
+        "description": "Easy installation kit included for sliding or double-hung windows.",
+        "category": "dieu-hoa"
+    },
+    {
+        "id": 16,
+        "name": "Samsung Electric Dryer 7.5 cu. ft. with Steam",
+        "slug": "samsung-electric-dryer-steam",
+        "code": "DVE50R5400W",
+        "price": 899.99,
+        "images": [
+            "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=300&q=80"
+        ],
+        "overview": "Steam sanitize+ cycle removes 99.9% of germs and bacteria.",
+        "description": "Sensor drying prevents over-drying and protects fabric quality.",
+        "category": "may-say-quan-ao"
+    },
+    {
+        "id": 17,
+        "name": "LG Smart Gas Dryer 7.4 cu. ft.",
+        "slug": "lg-smart-gas-dryer",
+        "code": "DLE4000W",
+        "price": 949.99,
+        "images": [
+            "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=300&q=80"
+        ],
+        "overview": "AI technology selects optimal drying settings automatically.",
+        "description": "Large capacity gas dryer with sleek tempered glass door.",
+        "category": "may-say-quan-ao"
+    },
+    {
+        "id": 18,
+        "name": "Whirlpool Electric Vented Dryer 7.0 cu. ft.",
+        "slug": "whirlpool-electric-vented-dryer",
+        "code": "WED4815EW",
+        "price": 699.99,
+        "images": [
+            "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=300&q=80"
+        ],
+        "overview": "AutoDry drying system senses when clothes have reached the right moisture content.",
+        "description": "Wrinkle Shield option helps keep wrinkles from setting into clean clothes.",
+        "category": "may-say-quan-ao"
+    },
+    {
+        "id": 19,
+        "name": "GE Chest Freezer 7.0 cu. ft.",
+        "slug": "ge-chest-freezer-7-cu-ft",
+        "code": "FCM7SKWW",
+        "price": 349.99,
+        "images": [
+            "https://images.unsplash.com/photo-1571175336579-6d19cf7ac42e?w=300&q=80"
+        ],
+        "overview": "Power indicator light lets you know at a glance if the freezer is working.",
+        "description": "Spacious interior storage basket keeps smaller items organized.",
+        "category": "tu-dong"
+    },
+    {
+        "id": 20,
+        "name": "Danby Upright Freezer 8.5 cu. ft.",
+        "slug": "danby-upright-freezer-8-5-cu-ft",
+        "code": "DUF085A4WDD",
+        "price": 499.99,
+        "images": [
+            "https://images.unsplash.com/photo-1571175336579-6d19cf7ac42e?w=300&q=80"
+        ],
+        "overview": "Upright design with convenient shelving for easy food access.",
+        "description": "Frost-free operation saves you from manual defrosting chores.",
+        "category": "tu-dong"
+    },
+    {
+        "id": 21,
+        "name": "Insignia Garage Ready Chest Freezer 10.2 cu. ft.",
+        "slug": "insignia-garage-ready-chest-freezer",
+        "code": "NS-CZ10WH6",
+        "price": 529.99,
+        "images": [
+            "https://images.unsplash.com/photo-1571175336579-6d19cf7ac42e?w=300&q=80"
+        ],
+        "overview": "Garage-ready design withstands extreme external temperatures.",
+        "description": "Extra large storage capacity with adjustable thermostat control.",
+        "category": "tu-dong"
+    },
+    {
+        "id": 22,
+        "name": "Danby Beverage Center 120 Can",
+        "slug": "danby-beverage-center-120-can",
+        "code": "DBC120BLS",
+        "price": 399.99,
+        "images": [
+            "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=300&q=80"
+        ],
+        "overview": "Sleek stainless steel trim with blue interior LED lighting.",
+        "description": "Keep up to 120 cans of your favorite beverages perfectly chilled.",
+        "category": "tu-mat"
+    },
+    {
+        "id": 23,
+        "name": "NewAir Compact Glass Door Fridge",
+        "slug": "newair-compact-glass-door-fridge",
+        "code": "AB-1200",
+        "price": 459.99,
+        "images": [
+            "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=300&q=80"
+        ],
+        "overview": "Adjustable shelves and double-pane glass door for insulation.",
+        "description": "Perfect addition to home bars, game rooms, or offices.",
+        "category": "tu-mat"
+    },
+    {
+        "id": 24,
+        "name": "Insignia 48-Can Beverage Cooler",
+        "slug": "insignia-48-can-beverage-cooler",
+        "code": "NS-BC1SS2",
+        "price": 229.99,
+        "images": [
+            "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=300&q=80"
+        ],
+        "overview": "Compact countertop beverage cooler with digital thermostat.",
+        "description": "Efficient cooling performance with reversible glass door.",
+        "category": "tu-mat"
+    },
+    {
+        "id": 25,
+        "name": "Dyson V15 Detect Cordless Vacuum",
+        "slug": "dyson-v15-detect-cordless-vacuum",
+        "code": "DYSON-V15",
+        "price": 749.99,
+        "images": [
+            "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300&q=80"
+        ],
+        "overview": "Laser reveals microscopic dust, intelligent suction adaptation.",
+        "description": "Powerful cordless vacuum cleaner with advanced HEPA filtration.",
+        "category": "may-hut-bui"
+    },
+    {
+        "id": 26,
+        "name": "Shark Vertex Pro Cordless Stick Vacuum",
+        "slug": "shark-vertex-pro-cordless-vacuum",
+        "code": "IZ862H",
+        "price": 399.99,
+        "images": [
+            "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300&q=80"
+        ],
+        "overview": "DuoClean PowerFins and IQ Display for real-time cleaning feedback.",
+        "description": "Flexology wand bends to clean under furniture effortlessly.",
+        "category": "may-hut-bui"
+    },
+    {
+        "id": 27,
+        "name": "iRobot Roomba j7+ Self-Emptying Robot Vacuum",
+        "slug": "irobot-roomba-j7-plus-robot-vacuum",
+        "code": "J755020",
+        "price": 699.99,
+        "images": [
+            "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300&q=80"
+        ],
+        "overview": "Avoids pet waste and cords with PrecisionVision Navigation.",
+        "description": "Empties itself into a Clean Base Automatic Dirt Disposal for up to 60 days.",
+        "category": "may-hut-bui"
+    },
+    {
+        "id": 28,
+        "name": "Apple iPad Pro 12.9\" M2",
+        "slug": "apple-ipad-pro-12-9-m2",
+        "code": "MNXP3LL/A",
+        "price": 1099.99,
+        "images": [
+            "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300&q=80"
+        ],
+        "overview": "Brilliant Liquid Retina XDR display, outrageous performance with M2 chip.",
+        "description": "Ultimate iPad experience with advanced camera and blazing-fast wireless connectivity.",
+        "category": "may-tinh-bang"
+    },
+    {
+        "id": 29,
+        "name": "Lenovo Tab P11 Pro Gen 2",
+        "slug": "lenovo-tab-p11-pro-gen-2",
+        "code": "ZABG0135US",
+        "price": 399.99,
+        "images": [
+            "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300&q=80"
+        ],
+        "overview": "OLED cinematic display and JBL quad speakers tuned by Dolby Atmos.",
+        "description": "Work and play portably with premium performance and precision stylus support.",
+        "category": "may-tinh-bang"
+    },
+    {
+        "id": 30,
+        "name": "ASUS ROG Zephyrus G14 Gaming Laptop",
+        "slug": "asus-rog-zephyrus-g14",
+        "code": "GA402RK-G14",
+        "price": 1599.99,
+        "images": [
+            "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80"
+        ],
+        "overview": "AMD Ryzen 9 processor and NVIDIA GeForce RTX graphics in a sleek 14-inch chassis.",
+        "description": "High performance gaming and content creation laptop with AniMe Matrix display.",
+        "category": "laptop"
+    },
+    {
+        "id": 31,
+        "name": "Hisense 55\" ULED 4K Smart TV",
+        "slug": "hisense-55-uled-4k-tv",
+        "code": "55U6K",
+        "price": 599.99,
+        "images": [
+            "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&q=80"
+        ],
+        "overview": "Mini-LED backlight technology and Quantum Dot Color for vivid contrast.",
+        "description": "Cinematic home entertainment experience with Google TV built-in.",
+        "category": "tivi"
+    },
+    {
+        "id": 32,
+        "name": "TCL 75\" Class Q6 QLED 4K Smart TV",
+        "slug": "tcl-75-q6-qled-tv",
+        "code": "75Q650F",
+        "price": 899.99,
+        "images": [
+            "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&q=80"
+        ],
+        "overview": "High Brightness Direct LED backlight with quantum dot technology.",
+        "description": "Massive screen immersive viewing with HDR Pro+ support.",
+        "category": "tivi"
+    },
+    {
+        "id": 33,
+        "name": "GE Profile Counter-Depth Refrigerator",
+        "slug": "ge-profile-counter-depth-fridge",
+        "code": "PYE22KYNFS",
+        "price": 2199.99,
+        "images": [
+            "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&q=80"
+        ],
+        "overview": "Counter-depth design fits flush with surrounding cabinetry.",
+        "description": "Keef food fresh with advanced Multi-Flow air system and precise temperature zones.",
+        "category": "tu-lanh"
+    },
+    {
+        "id": 34,
+        "name": "Bosch 800 Series Built-In Refrigerator",
+        "slug": "bosch-800-built-in-fridge",
+        "code": "B36CT80SNS",
+        "price": 2799.99,
+        "images": [
+            "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&q=80"
+        ],
+        "overview": "Home Connect smart refrigerator with FarmFresh System.",
+        "description": "Luxurious built-in design with optimal humidity control.",
+        "category": "tu-lanh"
+    },
+    {
+        "id": 35,
+        "name": "Maytag Front Load Washer with Extra Power",
+        "slug": "maytag-front-load-washer",
+        "code": "MHW5630HW",
+        "price": 1049.99,
+        "images": [
+            "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=300&q=80"
+        ],
+        "overview": "Extra Power button boosts stain-fighting performance on any wash cycle.",
+        "description": "Heavy-duty commercial grade components designed for durability.",
+        "category": "may-giat"
+    },
+    {
+        "id": 36,
+        "name": "GE Profile Top Load Washer with Smart Dispense",
+        "slug": "ge-profile-top-load-washer",
+        "code": "PTW905BPTRS",
+        "price": 899.99,
+        "images": [
+            "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=300&q=80"
+        ],
+        "overview": "Smart Dispense bulk detergent holder and built-in WiFi connectivity.",
+        "description": "Microban antimicrobial technology built into key washer components.",
+        "category": "may-giat"
+    },
+    {
+        "id": 37,
+        "name": "Friedrich Chill Premier Smart Window AC",
+        "slug": "friedrich-chill-premier-ac",
+        "code": "CCF12A33A",
+        "price": 599.99,
+        "images": [
+            "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=300&q=80"
+        ],
+        "overview": "Quiet operation and heavy-duty insulation for peace and comfort.",
+        "description": "Integrated Wi-Fi control compatible with smart home ecosystems.",
+        "category": "dieu-hoa"
+    },
+    {
+        "id": 38,
+        "name": "Black+Decker Portable Air Conditioner 10,000 BTU",
+        "slug": "black-decker-portable-ac",
+        "code": "BPACT10WT",
+        "price": 399.99,
+        "images": [
+            "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=300&q=80"
+        ],
+        "overview": "Compact portable AC with remote control and 24-hour timer.",
+        "description": "Maintains cool temperatures in rooms up to 250 square feet.",
+        "category": "dieu-hoa"
+    },
+    {
+        "id": 39,
+        "name": "Maytag Electric Dryer with Advanced Moisture Sensing",
+        "slug": "maytag-electric-dryer",
+        "code": "MED6230HW",
+        "price": 849.99,
+        "images": [
+            "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=300&q=80"
+        ],
+        "overview": "Advanced Moisture Sensing tracks dryness and stops cycle when done.",
+        "description": "Extra interior capacity easily handles bulky bedding and loads.",
+        "category": "may-say-quan-ao"
+    },
+    {
+        "id": 40,
+        "name": "Bosch 500 Series Condensation Electric Dryer",
+        "slug": "bosch-500-condensation-dryer",
+        "code": "WTG86402UC",
+        "price": 1199.99,
+        "images": [
+            "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=300&q=80"
+        ],
+        "overview": "Ventless design allows installation flexibility anywhere in the home.",
+        "description": "Fast drying performance with gentle fabric care protection.",
+        "category": "may-say-quan-ao"
+    },
+    {
+        "id": 41,
+        "name": "Frigidaire Chest Freezer 5.0 cu. ft.",
+        "slug": "frigidaire-chest-freezer-5-cu-ft",
+        "code": "FFCC0522VW",
+        "price": 299.99,
+        "images": [
+            "https://images.unsplash.com/photo-1571175336579-6d19cf7ac42e?w=300&q=80"
+        ],
+        "overview": "Compact chest freezer with easy-clean interior and adjustable thermostat.",
+        "description": "Perfect supplementary freezing storage for extra groceries.",
+        "category": "tu-dong"
+    },
+    {
+        "id": 42,
+        "name": "Midea Upright Freezer 3.0 cu. ft.",
+        "slug": "midea-upright-freezer-3-cu-ft",
+        "code": "WHS-109FW1",
+        "price": 249.99,
+        "images": [
+            "https://images.unsplash.com/photo-1571175336579-6d19cf7ac42e?w=300&q=80"
+        ],
+        "overview": "Reversible door swing and adjustable legs for convenient placement.",
+        "description": "Saves floor space while offering reliable freezing performance.",
+        "category": "tu-dong"
+    },
+    {
+        "id": 43,
+        "name": "Kalamera Beverage Refrigerator 154 Can",
+        "slug": "kalamera-beverage-refrigerator",
+        "code": "KRC-154BV",
+        "price": 549.99,
+        "images": [
+            "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=300&q=80"
+        ],
+        "overview": "Large capacity beverage cooler with digital temperature control.",
+        "description": "Removable wooden shelves and double-layer glass door.",
+        "category": "tu-mat"
+    },
+    {
+        "id": 44,
+        "name": "Ivation Wine and Beverage Cooler",
+        "slug": "ivation-wine-beverage-cooler",
+        "code": "IVFWCC1771",
+        "price": 479.99,
+        "images": [
+            "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=300&q=80"
+        ],
+        "overview": "Dual zone cooling for both wine and canned drinks.",
+        "description": "UV-resistant glass door protects wine quality against sunlight.",
+        "category": "tu-mat"
+    },
+    {
+        "id": 45,
+        "name": "Shark Navigator Lift-Away Upright Vacuum",
+        "slug": "shark-navigator-upright-vacuum",
+        "code": "NV352",
+        "price": 229.99,
+        "images": [
+            "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300&q=80"
+        ],
+        "overview": "Lift-Away pod allows detachable cleaning for stairs and ceilings.",
+        "description": "Anti-Allergen Complete Seal Technology captures 99.9% of dust and allergens.",
+        "category": "may-hut-bui"
+    },
+    {
+        "id": 46,
+        "name": "Bissell CleanView Swivel Pet Vacuum",
+        "slug": "bissell-cleanview-swivel-vacuum",
+        "code": "2252",
+        "price": 179.99,
+        "images": [
+            "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300&q=80"
+        ],
+        "overview": "Swivel steering for easy maneuverability around furniture.",
+        "description": "Triple Action Brush Roll and specialized pet tools.",
+        "category": "may-hut-bui"
+    },
+    {
+        "id": 47,
+        "name": "Microsoft Surface Pro 9",
+        "slug": "microsoft-surface-pro-9",
+        "code": "QIL-00001",
+        "price": 999.99,
+        "images": [
+            "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300&q=80"
+        ],
+        "overview": "Laptop power with tablet flexibility, featuring 13\" PixelSense touchscreen.",
+        "description": "Intel Evo platform performance with all-day battery life.",
+        "category": "may-tinh-bang"
+    },
+    {
+        "id": 48,
+        "name": "Amazon Fire Max 11 Tablet",
+        "slug": "amazon-fire-max-11-tablet",
+        "code": "B0B94D6MX3",
+        "price": 229.99,
+        "images": [
+            "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300&q=80"
+        ],
+        "overview": "Largest and most powerful Fire tablet with vibrant 11\" 2K screen.",
+        "description": "Sleek aluminum design with octa-core processor and 4GB RAM.",
+        "category": "may-tinh-bang"
+    },
+    {
+        "id": 49,
+        "name": "HP Envy x360 2-in-1 15.6\" Laptop",
+        "slug": "hp-envy-x360-15-laptop",
+        "code": "15-ew1023dx",
+        "price": 899.99,
+        "images": [
+            "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80"
+        ],
+        "overview": "Versatile 360-degree hinge with touch screen and Intel Core processor.",
+        "description": "Premium audio by Bang & Olufsen and fast charge battery support.",
+        "category": "laptop"
+    },
+    {
+        "id": 50,
+        "name": "Acer Predator Helios 16 Gaming Laptop",
+        "slug": "acer-predator-helios-16",
+        "code": "PH16-71-72KC",
+        "price": 1699.99,
+        "images": [
+            "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80"
+        ],
+        "overview": "Extreme gaming performance with 13th Gen Intel Core i7 and RTX graphics.",
+        "description": "Advanced cooling technology with 5th Gen AeroBlade 3D fan.",
+        "category": "laptop"
     }
 ]

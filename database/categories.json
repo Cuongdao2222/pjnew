@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "tên": "Tivi",
+        "đường dẫn ảnh": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&q=80",
+        "slug": "tivi"
+    },
+    {
+        "id": 2,
+        "tên": "Tủ Lạnh",
+        "đường dẫn ảnh": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&q=80",
+        "slug": "tu-lanh"
+    },
+    {
+        "id": 3,
+        "tên": "Máy giặt",
+        "đường dẫn ảnh": "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=300&q=80",
+        "slug": "may-giat"
+    },
+    {
+        "id": 4,
+        "tên": "Điều hòa",
+        "đường dẫn ảnh": "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=300&q=80",
+        "slug": "dieu-hoa"
+    },
+    {
+        "id": 5,
+        "tên": "Máy sấy quần áo",
+        "đường dẫn ảnh": "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=300&q=80",
+        "slug": "may-say-quan-ao"
+    },
+    {
+        "id": 6,
+        "tên": "Tủ đông",
+        "đường dẫn ảnh": "https://images.unsplash.com/photo-1571175336579-6d19cf7ac42e?w=300&q=80",
+        "slug": "tu-dong"
+    },
+    {
+        "id": 7,
+        "tên": "Tủ mát",
+        "đường dẫn ảnh": "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=300&q=80",
+        "slug": "tu-mat"
+    },
+    {
+        "id": 8,
+        "tên": "Máy hút bụi",
+        "đường dẫn ảnh": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300&q=80",
+        "slug": "may-hut-bui"
+    },
+    {
+        "id": 9,
+        "tên": "Máy tính bảng",
+        "đường dẫn ảnh": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300&q=80",
+        "slug": "may-tinh-bang"
+    },
+    {
+        "id": 10,
+        "tên": "Laptop",
+        "đường dẫn ảnh": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80",
+        "slug": "laptop"
+    }
+]

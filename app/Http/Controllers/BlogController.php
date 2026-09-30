@@ -24,16 +24,54 @@ class BlogController extends Controller
         return json_decode(File::get($path), true);
     }
 
+    private function getCategories()
+    {
+        $path = database_path('categories.json');
+        if (!File::exists($path)) {
+            $pathAlt = database_path('category.json');
+            if (File::exists($pathAlt)) {
+                $path = $pathAlt;
+            } else {
+                return [];
+            }
+        }
+        return json_decode(File::get($path), true);
+    }
+
     public function index()
     {
         $products = $this->getProducts();
-        return view('index', compact('products'));
+        $categories = $this->getCategories();
+        return view('index', compact('products', 'categories'));
     }
 
-    public function category()
+    public function category($slug = null)
     {
-        $products = $this->getProducts();
-        return view('category', compact('products'));
+        $allProducts = $this->getProducts();
+        $categories = $this->getCategories();
+        $products = [];
+
+        if ($slug) {
+            foreach ($allProducts as $p) {
+                if (isset($p['category']) && $p['category'] == $slug) {
+                    $products[] = $p;
+                }
+            }
+        } else {
+            if (count($categories) > 0) {
+                $slug = $categories[0]['slug'];
+                foreach ($allProducts as $p) {
+                    if (isset($p['category']) && $p['category'] == $slug) {
+                        $products[] = $p;
+                    }
+                }
+            }
+            if (empty($products)) {
+                $products = $allProducts;
+            }
+        }
+
+        return view('category', compact('products', 'categories', 'slug'));
     }
 
     public function detail($slug = null)

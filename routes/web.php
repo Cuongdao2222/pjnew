@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'BlogController@index');
-Route::get('/category', 'BlogController@category');
+Route::get('/category/{slug?}', 'BlogController@category');
 Route::get('/detail/{slug?}', 'BlogController@detail');
 Route::get('/cart', 'BlogController@viewCart');
 Route::get('/suggest', 'BlogController@suggest');
