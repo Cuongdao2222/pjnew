@@ -1,15 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Existing Carousel Logic
-    const nextBtn = document.querySelector('.carouselArrow.nextBtn');
+    // Existing Carousel Logic (More Deals / Exclusive Products)
+    const dealsPrevBtn = document.querySelector('.moreDealsContainer .carouselArrow.prevBtn');
+    const dealsNextBtn = document.querySelector('.moreDealsContainer .carouselArrow.nextBtn');
     const dealsGrid = document.querySelector('.dealsGrid');
 
-    if (nextBtn && dealsGrid) {
-        nextBtn.addEventListener('click', function() {
-            dealsGrid.scrollBy({
-                left: 300,
-                behavior: 'smooth'
+    if (dealsGrid) {
+        if (dealsPrevBtn) {
+            dealsPrevBtn.addEventListener('click', function() {
+                dealsGrid.scrollBy({ left: -300, behavior: 'smooth' });
             });
-        });
+        }
+        if (dealsNextBtn) {
+            dealsNextBtn.addEventListener('click', function() {
+                dealsGrid.scrollBy({ left: 300, behavior: 'smooth' });
+            });
+        }
     }
 
     // Search Suggestion Logic
@@ -143,4 +148,20 @@ document.addEventListener('DOMContentLoaded', function() {
             updateImage(index);
         });
     }
+
+    // Banner Carousel Sliding Logic
+    document.querySelectorAll('.featureBannerCard').forEach(banner => {
+        const prevBtn = banner.querySelector('.bannerNavBtn.prevBtn');
+        const nextBtn = banner.querySelector('.bannerNavBtn.nextBtn');
+        const grid = banner.querySelector('.bannerProductsGrid');
+
+        if (prevBtn && nextBtn && grid) {
+            prevBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: -200, behavior: 'smooth' });
+            });
+            nextBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: 200, behavior: 'smooth' });
+            });
+        }
+    });
 });

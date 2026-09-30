@@ -64,11 +64,22 @@
 
             <nav class="categoryNav">
                 <ul>
-                    <li><a href="#" class="menuBtn"><i class="fa-solid fa-bars"></i> Cửa hàng</a></li>
-                    <li><a href="{{ url('/category') }}">Ưu đãi</a></li>
-                    <li><a href="#">Xả kho</a></li>
-                    <li><a href="#">Dịch vụ</a></li>
-                    <li><a href="#">Sức khỏe</a></li>
+                    <li><a href="/" class="menuBtn"><i class="fa-solid fa-bars"></i> Trang chủ</a></li>
+                    @if(isset($categories) && count($categories) > 0)
+                        @foreach(array_slice($categories, 0, 4) as $cat)
+                            <li class="navItemWithSub">
+                                <a href="{{ url('/category/' . $cat['slug']) }}">{{ $cat['tên'] }}</a>
+                                @if(isset($cat['subcategories']) && count($cat['subcategories']) > 0)
+                                    <ul class="submenu">
+                                        @foreach($cat['subcategories'] as $sub)
+                                            <li><a href="{{ url('/category/' . $cat['slug']) }}">{{ $sub['tên'] }}</a></li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </li>
+                        @endforeach
+                    @endif
+
                 </ul>
             </nav>
         </header>
@@ -163,7 +174,7 @@
                         <h3 class="newsTitle">Hãy là người đầu tiên biết</h3>
                         <p class="newsDesc">Đăng ký để cập nhật những ưu đãi hot nhất, sản phẩm mới nhất và các sự kiện giảm giá độc quyền.</p>
                         <a href="#" class="newsInfoLink">thông tin của tôi như thế nào? <i class="fa-solid fa-chevron-down"></i></a>
-                        
+
                         <form class="subscribeForm" onsubmit="event.preventDefault();">
                             <input type="email" placeholder="Địa chỉ Email" required class="emailInput">
                             <button type="submit" class="btnSignUp">Đăng ký</button>

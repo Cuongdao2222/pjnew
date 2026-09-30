@@ -38,11 +38,34 @@ class BlogController extends Controller
         return json_decode(File::get($path), true);
     }
 
+    private function getProductsByFlag($flag)
+    {
+        $products = $this->getProducts();
+        $flags = config('product_flags', []);
+        $targetIds = $flags[$flag] ?? [];
+        
+        if (empty($targetIds)) {
+            return [];
+        }
+
+        $filtered = [];
+        foreach ($products as $p) {
+            if (in_array($p['id'], $targetIds)) {
+                $filtered[] = $p;
+            }
+        }
+        return $filtered;
+    }
+
     public function index()
     {
         $products = $this->getProducts();
         $categories = $this->getCategories();
-        return view('index', compact('products', 'categories'));
+        $exclusiveProducts = $this->getProductsByFlag('exclusive');
+        $newProducts = $this->getProductsByFlag('new');
+        $hotProducts = $this->getProductsByFlag('hot');
+
+        return view('index', compact('products', 'categories', 'exclusiveProducts', 'newProducts', 'hotProducts'));
     }
 
     public function category($slug = null)

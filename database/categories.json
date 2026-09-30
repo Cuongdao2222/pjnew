@@ -3,25 +3,47 @@
         "id": 1,
         "tên": "Tivi",
         "đường dẫn ảnh": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=300&q=80",
-        "slug": "tivi"
+        "slug": "tivi",
+        "subcategories": [
+            {"tên": "Smart TV", "slug": "smart-tv"},
+            {"tên": "OLED TV", "slug": "oled-tv"},
+            {"tên": "4K TV", "slug": "4k-tv"},
+            {"tên": "QLED TV", "slug": "qled-tv"}
+        ]
     },
     {
         "id": 2,
         "tên": "Tủ Lạnh",
         "đường dẫn ảnh": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&q=80",
-        "slug": "tu-lanh"
+        "slug": "tu-lanh",
+        "subcategories": [
+            {"tên": "Tủ lạnh Side by Side", "slug": "tu-lanh-side-by-side"},
+            {"tên": "Tủ lạnh Inverter", "slug": "tu-lanh-inverter"},
+            {"tên": "Tủ lạnh Mini", "slug": "tu-lanh-mini"},
+            {"tên": "Tủ lạnh Multi Door", "slug": "tu-lanh-multi-door"}
+        ]
     },
     {
         "id": 3,
         "tên": "Máy giặt",
         "đường dẫn ảnh": "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=300&q=80",
-        "slug": "may-giat"
+        "slug": "may-giat",
+        "subcategories": [
+            {"tên": "Máy giặt cửa ngang", "slug": "may-giat-cua-ngang"},
+            {"tên": "Máy giặt cửa trên", "slug": "may-giat-cua-tren"},
+            {"tên": "Máy giặt sấy", "slug": "may-giat-say"}
+        ]
     },
     {
         "id": 4,
         "tên": "Điều hòa",
         "đường dẫn ảnh": "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?w=300&q=80",
-        "slug": "dieu-hoa"
+        "slug": "dieu-hoa",
+        "subcategories": [
+            {"tên": "Điều hòa 1 chiều", "slug": "dieu-hoa-1-chieu"},
+            {"tên": "Điều hòa 2 chiều", "slug": "dieu-hoa-2-chieu"},
+            {"tên": "Điều hòa Inverter", "slug": "dieu-hoa-inverter"}
+        ]
     },
     {
         "id": 5,

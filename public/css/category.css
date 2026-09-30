@@ -191,7 +191,8 @@
 }
 
 .sortControl label {
-    color: #666;
+    color: #1d252c;
+    font-weight: 500;
 }
 
 .sortControl select {
@@ -333,6 +334,130 @@
     background-color: #e6da00;
 }
 
-.btnAddToCart i {
+/* Brand Search */
+.filterSearch {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.filterSearch input {
+    width: 100%;
+    padding: 8px 32px 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    outline: none;
+}
+
+.filterSearch i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
     font-size: 14px;
+}
+
+.scrollableList {
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.scrollableList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollableList::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+/* Rating Filter */
+.ratingFilterList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ratingFilterList label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.ratingFilterList input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #0046be;
+}
+
+.ratingFilterList .stars {
+    color: #ffc107;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.ratingLabel {
+    color: #1d252c;
+}
+
+.ratingLabel span {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Price Range Inputs */
+.priceRangeInputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.priceRangeInputs input {
+    width: 60px;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.priceRangeInputs span {
+    font-size: 13px;
+    color: #666;
+}
+
+.priceRangeInputs button {
+    background: #0046be;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.priceRangeInputs button:hover {
+    background: #003591;
+}
+
+/* Product Card Improvements */
+.ratingCount {
+    color: #666;
+    font-size: 12px;
+}
+
+.availability {
+    font-size: 12px;
+    color: #067d62;
+    font-weight: 600;
 }
