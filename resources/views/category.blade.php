@@ -214,9 +214,9 @@
                             <span class="ratingCount">({{ $product['rating'] ?? 5 }})</span>
                         </div>
                         <div class="productPrice">
-                            <span class="currentPrice">${{ number_format($product['price'], 2) }}</span>
+                            <span class="currentPrice">{{ number_format($product['price'] * 25000, 0, ',', '.') }} đ</span>
                             @if(isset($product['old_price']))
-                                <span class="saveBadge">SAVE ${{ number_format($product['old_price'] - $product['price'], 2) }}</span>
+                                <span class="saveBadge">TIẾT KIỆM {{ number_format(($product['old_price'] - $product['price']) * 25000, 0, ',', '.') }} đ</span>
                             @endif
                         </div>
                         <p class="availability">Available Online (SL: {{ $product['quantity'] ?? 100 }})</p>

@@ -35,7 +35,7 @@
 
             <div class="priceBlock">
                 <div class="priceLeft">
-                    <div class="priceMain">${{ number_format($product['price'], 2) }}</div>
+                    <div class="priceMain">{{ number_format($product['price'] * 25000, 0, ',', '.') }} đ</div>
                 </div>
             </div>
 

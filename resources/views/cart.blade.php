@@ -20,7 +20,7 @@
                     <img src="{{ $item['image'] }}" alt="{{ $item['name'] }}">
                     <div class="itemInfo">
                         <h3>{{ $item['name'] }}</h3>
-                        <p>Price: ${{ number_format($item['price'], 2) }}</p>
+                        <p>Giá: {{ number_format($item['price'] * 25000, 0, ',', '.') }} đ</p>
                         <p>Quantity: {{ $item['quantity'] }}</p>
                     </div>
                 </div>

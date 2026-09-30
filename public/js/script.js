@@ -227,8 +227,30 @@ document.addEventListener('DOMContentLoaded', function() {
             sortedCards.forEach(card => productGrid.appendChild(card));
         }
 
-        if (inStockCheckbox) inStockCheckbox.addEventListener('change', applyFilterAndSort);
-        if (bestBuyCheckbox) bestBuyCheckbox.addEventListener('change', applyFilterAndSort);
-        if (sortSelect) sortSelect.addEventListener('change', applyFilterAndSort);
+        if (inStockCheckbox) {
+            inStockCheckbox.addEventListener('change', function() {
+                if (this.checked && bestBuyCheckbox) {
+                    bestBuyCheckbox.checked = false;
+                }
+                applyFilterAndSort();
+            });
+        }
+
+        if (bestBuyCheckbox) {
+            bestBuyCheckbox.addEventListener('change', function() {
+                if (this.checked && inStockCheckbox) {
+                    inStockCheckbox.checked = false;
+                }
+                applyFilterAndSort();
+            });
+        }
+
+        if (sortSelect) {
+            sortSelect.addEventListener('change', function() {
+                if (inStockCheckbox) inStockCheckbox.checked = false;
+                if (bestBuyCheckbox) bestBuyCheckbox.checked = false;
+                applyFilterAndSort();
+            });
+        }
     }
 });

@@ -45,7 +45,7 @@
 
                 <div class="searchBar">
                     <form id="searchForm" action="#" method="GET">
-                        <input type="text" placeholder="Tìm kiếm tại Best Buy" aria-label="Tìm kiếm tại Best Buy">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm" aria-label="Tìm kiếm tại Best Buy">
                         <button type="submit" aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>

@@ -107,7 +107,7 @@
                     <h3 class="offerTitle">
                         <a href="{{ url('/detail/' . $product['slug']) }}" style="color:white; text-decoration:none;">{{ $product['name'] }}</a>
                     </h3>
-                    <p class="offerSubtext">Giá: ${{ number_format($product['price'], 2) }}</p>
+                    <p class="offerSubtext">Giá: {{ number_format($product['price'] * 25000, 0, ',', '.') }} đ</p>
                     <a href="{{ url('/detail/' . $product['slug']) }}" class="offerLink">Mua ngay <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
             </div>
@@ -172,7 +172,7 @@
                                 <div class="stars">★★★★★</div>
                             </div>
                             <span class="saveBadge">ĐỘC QUYỀN</span>
-                            <div class="productPrice">${{ number_format($product['price'], 2) }}</div>
+                            <div class="productPrice">{{ number_format($product['price'] * 25000, 0, ',', '.') }} đ</div>
                         </div>
                     </div>
                     @endforeach
@@ -233,7 +233,7 @@
                         <div class="prodRating">
                             <span class="stars">★★★★★</span>
                         </div>
-                        <div class="prodPrice">${{ number_format($product['price'], 2) }}</div>
+                        <div class="prodPrice">{{ number_format($product['price'] * 25000, 0, ',', '.') }} đ</div>
                     </div>
                 </div>
                 @endforeach
