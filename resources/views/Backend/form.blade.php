@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form nhập liệu sản phẩm</title>
+  <title>{{ isset($product) ? 'Sửa sản phẩm' : 'Thêm sản phẩm mới' }}</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -20,6 +20,56 @@
       box-shadow: 0 1px 3px rgba(0,0,0,.08);
       overflow: hidden;
     }
+    /* Admin Menu Bar */
+    .admin-menu {
+      background: #1f2937;
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .admin-menu .logo {
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .admin-menu nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .admin-menu nav a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color .15s;
+    }
+    .admin-menu nav a:hover, .admin-menu nav a.active {
+      color: #ef4444;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: #f8f9fa;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .top-nav h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #111827;
+    }
+    .top-nav a {
+      font-size: 14px;
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .top-nav a:hover { text-decoration: underline; }
+
     /* Tabs */
     .tabs {
       display: flex;
@@ -62,6 +112,7 @@
     }
     input[type="text"],
     input[type="number"],
+    input[type="url"],
     select,
     textarea {
       padding: 9px 12px;
@@ -98,43 +149,8 @@
       border-radius: 4px;
       background: #fff;
       cursor: pointer;
-      color: #374151;
     }
     .btn-link:hover { background: #f9fafb; }
-
-    /* Rich text toolbar (giả) */
-    .editor-toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2px;
-      padding: 8px;
-      background: #f9fafb;
-      border: 1px solid #d1d5db;
-      border-bottom: none;
-      border-radius: 6px 6px 0 0;
-      font-size: 13px;
-    }
-    .editor-toolbar button {
-      padding: 4px 8px;
-      border: none;
-      background: transparent;
-      border-radius: 3px;
-      cursor: pointer;
-      color: #4b5563;
-    }
-    .editor-toolbar button:hover { background: #e5e7eb; }
-    .editor-area {
-      border: 1px solid #d1d5db;
-      border-radius: 0 0 6px 6px;
-      min-height: 160px;
-      padding: 12px;
-      font-size: 14px;
-      line-height: 1.6;
-      outline: none;
-    }
-    .editor-area:focus { border-color: #3b82f6; }
-    .editor-area ul { padding-left: 20px; }
-    .editor-area li { margin-bottom: 4px; }
 
     /* Actions */
     .form-actions {
@@ -163,6 +179,9 @@
       background: #fff;
       border: 1px solid #d1d5db;
       color: #374151;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
     }
     .btn-secondary:hover { background: #f9fafb; }
 
@@ -188,9 +207,32 @@
       .form-grid { grid-template-columns: 1fr; }
     }
   </style>
+  <!-- CKEditor CDN -->
+  <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
 </head>
 <body>
+  @php
+    $isEdit = isset($product) && $product;
+    $actionUrl = $isEdit ? '/backend/product/' . $product['id'] : '/backend/product/store';
+  @endphp
+
   <div class="form-container">
+    <div class="admin-menu">
+      <div class="logo">Admin Dashboard</div>
+      <nav>
+        <a href="/backend/products">📦 Quản lý sản phẩm</a>
+        <a href="/backend/categories">📁 Quản lý danh mục</a>
+        <a href="/backend/product/create" class="{{ !$isEdit ? 'active' : '' }}">+ Thêm sản phẩm</a>
+        <a href="/backend/category/create">+ Thêm danh mục</a>
+        <a href="/" style="color: #9ca3af; font-size: 13px;">🌐 Xem Website</a>
+      </nav>
+    </div>
+
+    <div class="top-nav">
+      <h2>{{ $isEdit ? 'Sửa sản phẩm #' . $product['id'] : 'Thêm sản phẩm mới' }}</h2>
+      <a href="/backend/products">← Quay lại danh sách quản lý</a>
+    </div>
+
     <!-- Tabs -->
     <div class="tabs">
       <button class="tab active" data-tab="basic">Cơ bản</button>
@@ -203,56 +245,63 @@
       <button class="tab" data-tab="display">Hiển thị</button>
     </div>
 
-    <form id="productForm" novalidate>
+    <form id="productForm" novalidate data-is-edit="{{ $isEdit ? 'true' : 'false' }}" data-action="{{ $actionUrl }}">
       @csrf
+      @if($isEdit)
+        @method('PUT')
+      @endif
+
       <!-- Tab: Cơ bản -->
       <div class="tab-content active" id="tab-basic">
         <div class="form-grid">
           <div class="form-group">
             <label for="tenSanPham">Tên sản phẩm: <span style="color:#ef4444">*</span></label>
             <input type="text" id="tenSanPham" name="tenSanPham" 
-                   value="Google Tivi TCL QD-Mini LED 55P8LS 55 inch 4K"
+                   value="{{ $isEdit ? ($product['name'] ?? '') : 'Google Tivi TCL QD-Mini LED 55P8LS 55 inch 4K' }}"
                    placeholder="Nhập tên sản phẩm" required minlength="5" maxlength="200">
             <span class="error-msg" id="err-tenSanPham">Tên sản phẩm bắt buộc, tối thiểu 5 ký tự</span>
           </div>
 
           <div class="form-group">
             <label for="model">Model: <span style="color:#ef4444">*</span></label>
-            <input type="text" id="model" name="model" value="55P8LS"
+            <input type="text" id="model" name="model" value="{{ $isEdit ? ($product['code'] ?? ($product['model'] ?? '')) : '55P8LS' }}"
                    placeholder="Nhập model" required maxlength="50">
             <span class="error-msg" id="err-model">Model bắt buộc</span>
           </div>
 
           <div class="form-group">
             <label for="gia">Giá: <span style="color:#ef4444">*</span></label>
-            <input type="number" id="gia" name="gia" value="11850000"
+            <input type="number" id="gia" name="gia" value="{{ $isEdit ? ($product['price'] ?? 0) : '11850000' }}"
                    placeholder="0" required min="0" step="1000">
             <span class="error-msg" id="err-gia">Giá phải ≥ 0</span>
           </div>
 
           <div class="form-group">
             <label for="giaHang">Giá Hãng:</label>
-            <input type="number" id="giaHang" name="giaHang" placeholder="0" min="0" step="1000">
+            <input type="number" id="giaHang" name="giaHang" value="{{ $isEdit ? ($product['original_price'] ?? '') : '' }}" placeholder="0" min="0" step="1000">
             <span class="error-msg" id="err-giaHang">Giá hãng phải ≥ 0</span>
           </div>
 
           <div class="form-group">
             <label for="soLuong">Số lượng trong kho: <span style="color:#ef4444">*</span></label>
-            <input type="number" id="soLuong" name="soLuong" value="12"
+            <input type="number" id="soLuong" name="soLuong" value="{{ $isEdit ? ($product['quantity'] ?? ($product['stock'] ?? 0)) : '12' }}"
                    placeholder="0" required min="0" step="1">
             <span class="error-msg" id="err-soLuong">Số lượng phải ≥ 0</span>
           </div>
 
           <div class="form-group">
             <label for="hangPhanPhoi">Hãng phân phối: <span style="color:#ef4444">*</span></label>
+            @php
+              $currentBrand = $isEdit ? ($product['brand'] ?? '') : 'TCL';
+            @endphp
             <select id="hangPhanPhoi" name="hangPhanPhoi" required>
               <option value="">-- Chọn hãng --</option>
-              <option value="TCL" selected>TCL</option>
-              <option value="Samsung">Samsung</option>
-              <option value="LG">LG</option>
-              <option value="Sony">Sony</option>
-              <option value="Xiaomi">Xiaomi</option>
-              <option value="Khác">Khác</option>
+              <option value="TCL" {{ $currentBrand == 'TCL' ? 'selected' : '' }}>TCL</option>
+              <option value="Samsung" {{ $currentBrand == 'Samsung' ? 'selected' : '' }}>Samsung</option>
+              <option value="LG" {{ $currentBrand == 'LG' ? 'selected' : '' }}>LG</option>
+              <option value="Sony" {{ $currentBrand == 'Sony' ? 'selected' : '' }}>Sony</option>
+              <option value="Xiaomi" {{ $currentBrand == 'Xiaomi' ? 'selected' : '' }}>Xiaomi</option>
+              <option value="Khác" {{ $currentBrand == 'Khác' ? 'selected' : '' }}>Khác</option>
             </select>
             <span class="error-msg" id="err-hangPhanPhoi">Vui lòng chọn hãng phân phối</span>
           </div>
@@ -260,45 +309,28 @@
           <div class="form-group">
             <label for="link">Link:</label>
             <input type="text" id="link" name="link" 
-                   value="google-tivi-tcl-qd-mini-led-55p8ls-55-inch-4k" readonly>
+                   value="{{ $isEdit ? ($product['slug'] ?? '') : 'google-tivi-tcl-qd-mini-led-55p8ls-55-inch-4k' }}" readonly>
             <button type="button" class="btn-link" id="btnLinkKhac">Link khác</button>
           </div>
 
           <div class="form-group">
             <label for="linkRedirect">Link Redirect:</label>
             <input type="url" id="linkRedirect" name="linkRedirect" 
+                   value="{{ $isEdit ? ($product['redirect_url'] ?? '') : '' }}"
                    placeholder="https://...">
             <span class="error-msg" id="err-linkRedirect">URL không hợp lệ</span>
           </div>
 
           <div class="form-group full">
-            <label>Đặc điểm nổi bật</label>
-            <div class="editor-toolbar">
-              <button type="button" title="Bold"><b>B</b></button>
-              <button type="button" title="Italic"><i>I</i></button>
-              <button type="button" title="Underline"><u>U</u></button>
-              <button type="button">• List</button>
-              <button type="button">1. List</button>
-              <button type="button">🔗</button>
-              <button type="button">🖼️</button>
-            </div>
-            <div class="editor-area" id="dacDiem" contenteditable="true">
-              <ul>
-                <li>Xuất xứ: Việt Nam</li>
-                <li>Bảo hành: 24 Tháng</li>
-                <li>Kích thước: 55 inch</li>
-                <li>Độ phân giải: 4K (3840*2160)</li>
-                <li>HDMI: 4 cổng</li>
-              </ul>
-            </div>
-            <input type="hidden" name="dacDiemNoiBat" id="dacDiemHidden">
+            <label for="dacDiem">Đặc điểm nổi bật</label>
+            <textarea name="dacDiemNoiBat" id="dacDiem">{!! $isEdit ? ($product['overview'] ?? '') : '<ul><li>Xuất xứ: Việt Nam</li><li>Bảo hành: 24 Tháng</li><li>Kích thước: 55 inch</li><li>Độ phân giải: 4K (3840*2160)</li><li>HDMI: 4 cổng</li></ul>' !!}</textarea>
           </div>
         </div>
       </div>
 
       <!-- Các tab khác (placeholder) -->
       <div class="tab-content" id="tab-category">
-        <p style="color:#6b7280">Nội dung tab Danh mục (có thể mở rộng sau)</p>
+        <p style="color:#6b7280">Nội dung tab Danh mục</p>
       </div>
       <div class="tab-content" id="tab-seo">
         <p style="color:#6b7280">Nội dung tab SEO</p>
@@ -320,8 +352,8 @@
       </div>
 
       <div class="form-actions">
-        <button type="button" class="btn btn-secondary" id="btnCancel">Hủy</button>
-        <button type="submit" class="btn btn-primary">Lưu sản phẩm</button>
+        <a href="/backend/products" class="btn btn-secondary" id="btnCancel">Hủy</a>
+        <button type="submit" class="btn btn-primary">{{ $isEdit ? 'Cập nhật sản phẩm' : 'Lưu sản phẩm' }}</button>
       </div>
     </form>
   </div>
@@ -329,6 +361,9 @@
   <div class="toast" id="toast"></div>
 
   <script>
+    // Initialize CKEditor
+    CKEDITOR.replace('dacDiem');
+
     // ===== Tab switching =====
     document.querySelectorAll('.tab').forEach(tab => {
       tab.addEventListener('click', () => {
@@ -339,7 +374,7 @@
       });
     });
 
-    // ===== Auto generate slug from tên sản phẩm =====
+    // ===== Auto generate slug từ tên sản phẩm =====
     const tenSanPham = document.getElementById('tenSanPham');
     const linkInput = document.getElementById('link');
     let linkManual = false;
@@ -370,7 +405,7 @@
     function showError(id, msg) {
       const input = document.getElementById(id);
       const err = document.getElementById('err-' + id);
-      input.classList.add('error');
+      if (input) input.classList.add('error');
       if (err) {
         if (msg) err.textContent = msg;
         err.classList.add('show');
@@ -379,7 +414,7 @@
     function clearError(id) {
       const input = document.getElementById(id);
       const err = document.getElementById('err-' + id);
-      input.classList.remove('error');
+      if (input) input.classList.remove('error');
       if (err) err.classList.remove('show');
     }
     function clearAllErrors() {
@@ -387,52 +422,44 @@
       document.querySelectorAll('.error-msg').forEach(el => el.classList.remove('show'));
     }
 
-    // ===== Validate form =====
     function validateForm() {
       clearAllErrors();
       let valid = true;
 
-      // Tên sản phẩm
       const ten = tenSanPham.value.trim();
       if (!ten || ten.length < 5) {
         showError('tenSanPham');
         valid = false;
       }
 
-      // Model
       if (!document.getElementById('model').value.trim()) {
         showError('model');
         valid = false;
       }
 
-      // Giá
       const gia = document.getElementById('gia').value;
       if (gia === '' || Number(gia) < 0) {
         showError('gia');
         valid = false;
       }
 
-      // Giá hãng (optional nhưng nếu có thì ≥ 0)
       const giaHang = document.getElementById('giaHang').value;
       if (giaHang !== '' && Number(giaHang) < 0) {
         showError('giaHang');
         valid = false;
       }
 
-      // Số lượng
       const soLuong = document.getElementById('soLuong').value;
       if (soLuong === '' || Number(soLuong) < 0) {
         showError('soLuong');
         valid = false;
       }
 
-      // Hãng phân phối
       if (!document.getElementById('hangPhanPhoi').value) {
         showError('hangPhanPhoi');
         valid = false;
       }
 
-      // Link Redirect (optional, nhưng phải là URL hợp lệ nếu có)
       const redirect = document.getElementById('linkRedirect').value.trim();
       if (redirect) {
         try {
@@ -446,30 +473,29 @@
       return valid;
     }
 
-    // Real-time clear error on input
     ['tenSanPham', 'model', 'gia', 'giaHang', 'soLuong', 'hangPhanPhoi', 'linkRedirect']
       .forEach(id => {
         const el = document.getElementById(id);
-        el.addEventListener('input', () => clearError(id));
-        el.addEventListener('change', () => clearError(id));
+        if (el) {
+          el.addEventListener('input', () => clearError(id));
+          el.addEventListener('change', () => clearError(id));
+        }
       });
 
     // ===== Submit =====
-    document.getElementById('productForm').addEventListener('submit', function(e) {
+    const productForm = document.getElementById('productForm');
+    productForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      // Sync contenteditable vào hidden
-      document.getElementById('dacDiemHidden').value = 
-        document.getElementById('dacDiem').innerHTML;
+      // Get content from CKEditor
+      const dacDiemContent = CKEDITOR.instances.dacDiem ? CKEDITOR.instances.dacDiem.getData() : '';
 
       if (!validateForm()) {
         showToast('Vui lòng kiểm tra lại các trường bắt buộc', 'error');
-        // Chuyển về tab Cơ bản nếu đang ở tab khác
         document.querySelector('.tab[data-tab="basic"]').click();
         return;
       }
 
-      // Collect data
       const data = {
         tenSanPham: tenSanPham.value.trim(),
         model: document.getElementById('model').value.trim(),
@@ -480,13 +506,15 @@
         hangPhanPhoi: document.getElementById('hangPhanPhoi').value,
         link: linkInput.value,
         linkRedirect: document.getElementById('linkRedirect').value.trim() || null,
-        dacDiemNoiBat: document.getElementById('dacDiemHidden').value
+        dacDiemNoiBat: dacDiemContent
       };
 
-      console.log('Dữ liệu form:', data);
-      
-      fetch('/backend/product/store', {
-        method: 'POST',
+      const isEdit = productForm.dataset.isEdit === 'true';
+      const actionUrl = productForm.dataset.action;
+      const method = isEdit ? 'PUT' : 'POST';
+
+      fetch(actionUrl, {
+        method: method,
         headers: {
           'Content-Type': 'application/json',
           'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
@@ -496,24 +524,18 @@
       .then(response => response.json())
       .then(result => {
         if (result.success) {
-          showToast('Lưu sản phẩm thành công!', 'success');
+          showToast(isEdit ? 'Cập nhật sản phẩm thành công!' : 'Lưu sản phẩm thành công!', 'success');
           setTimeout(() => {
-            window.location.href = '/';
-          }, 2000);
+            window.location.href = '/backend/products';
+          }, 1500);
         } else {
-          showToast('Có lỗi xảy ra khi lưu sản phẩm', 'error');
+          showToast(result.message || 'Có lỗi xảy ra', 'error');
         }
       })
       .catch(error => {
         console.error('Error:', error);
         showToast('Lỗi hệ thống!', 'error');
       });
-    });
-
-    document.getElementById('btnCancel').addEventListener('click', () => {
-      if (confirm('Bạn có chắc muốn hủy? Dữ liệu chưa lưu sẽ bị mất.')) {
-        location.reload();
-      }
     });
 
     // ===== Toast =====
