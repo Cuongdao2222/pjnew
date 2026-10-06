@@ -3,7 +3,7 @@
 @section('title', 'Mua sắm trực tuyến, Ưu đãi & Tiết kiệm ')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?ver=3">
 @endsection
 
 @section('content')
