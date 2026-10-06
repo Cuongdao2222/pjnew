@@ -25,8 +25,8 @@
 }
 
 .darkTheme { background-color: #000; color: #fff; }
-.blueGradient { background: linear-gradient(135deg, #1844b9 0%, #0c2b7a 100%); color: #fff; }
-.purpleGradient { background: linear-gradient(135deg, #501d8a 0%, #290a4e 100%); color: #fff; }
+.blueGradient { background: #3B8AC6; color: #fff; }
+.purpleGradient { background: #3B8AC6; color: #fff; }
 
 .cardHeader {
     display: flex;
@@ -67,7 +67,7 @@
 
 /* Hottest Offers */
 .hottestOffersContainer {
-    background: linear-gradient(180deg, #0443ac 0%, #1077b9 100%);
+    background: #3B8AC6;
     padding: 40px 16px;
     color: #ffffff;
 }
@@ -98,7 +98,7 @@
 .categoryItem span { font-size: 13px; font-weight: 500; color: #0046be; }
 
 .myBestBuyBanner {
-    background: linear-gradient(90deg, #0d3880 0%, #1742a0 100%);
+    background: #3B8AC6;
     color: #ffffff; padding: 16px 24px; max-width: 1200px; margin: 0 auto; border-radius: 4px;
     display: flex; align-items: center; justify-content: space-between;
 }
@@ -154,7 +154,7 @@
 /* Feature Promo Banners */
 .promoBannersContainer { max-width: 1200px; margin: 0 auto 48px auto; padding: 0 16px; display: flex; flex-direction: column; gap: 32px; }
 .featureBannerCard { border-radius: 12px; padding: 32px; display: flex; align-items: center; gap: 32px; color: #ffffff; }
-.btsGradient { background: linear-gradient(135deg, #3d0c92 0%, #203bb0 50%, #4a19b0 100%); }
+.btsGradient { background: #3B8AC6; }
 .techGradient { background: linear-gradient(135deg, #270678 0%, #0d2891 50%, #1754ba 100%); }
 
 .bannerInfoCol { width: 240px; flex-shrink: 0; }

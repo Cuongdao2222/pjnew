@@ -199,8 +199,8 @@ body {
 .footerValueProps { background-color: #ffffff; border-top: 1px solid #e0e6ef; border-bottom: 1px solid #e0e6ef; padding: 20px 16px; }
 .valuePropsWrapper { max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
 .propItem { display: flex; align-items: center; gap: 12px; }
-.propIcon { font-size: 24px; color: #0046be; }
-.propText { font-size: 13px; font-weight: 700; color: #0046be; line-height: 1.2; }
+.propIcon { font-size: 24px; color: #3B8AC6; }
+.propText { font-size: 13px; font-weight: 700; color: #3B8AC6; line-height: 1.2; }
 
 .footerMain { padding: 40px 16px 20px 16px; }
 .footerMainWrapper { max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; }
@@ -215,7 +215,7 @@ body {
 .newsDesc { font-size: 11px; margin-bottom: 8px; }
 .subscribeForm { display: flex; margin-bottom: 16px; }
 .emailInput { flex: 1; height: 36px; padding: 0 10px; border: 1px solid #c5cbd5; border-radius: 4px 0 0 4px; font-size: 11px; }
-.btnSignUp { height: 36px; padding: 0 16px; background-color: #0046be; color: #ffffff; border: none; border-radius: 0 4px 4px 0; font-weight: 700; cursor: pointer; }
+.btnSignUp { height: 36px; padding: 0 16px; background-color: #3B8AC6; color: #ffffff; border: none; border-radius: 0 4px 4px 0; font-weight: 700; cursor: pointer; }
 .socialIcons { display: flex; gap: 16px; font-size: 16px; }
 .socialIcons a { color: #1d252c; text-decoration: none; }
 
