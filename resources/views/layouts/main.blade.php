@@ -13,7 +13,7 @@
 <body>
     <div id="root">
         <header class="headerContainer" role="banner">
-            <div class="upperToolbar">
+            <!-- <div class="upperToolbar">
                 <nav aria-label="Trạng thái đơn hàng, Blog, Best Buy Doanh nghiệp và Tiếng Pháp">
                     <ul class="navList">
                         <li><a href="{{ url('/backend/product/create') }}">Quản trị</a></li>
@@ -23,7 +23,7 @@
                         <li><a href="#">Tiếng Pháp</a></li>
                     </ul>
                 </nav>
-            </div>
+            </div> -->
 
             <div class="mainHeader">
                 <div class="logoContainer">
@@ -119,8 +119,7 @@
                                 <li><a href="#">Liên hệ với chúng tôi</a></li>
                                 <li><a href="#">Trung tâm hỗ trợ</a></li>
                                 <li><a href="#">Trả hàng & Đổi hàng</a></li>
-                                <li><a href="#">Thẻ quà tặng Best Buy</a></li>
-                                <li><a href="#">Về Best Buy Marketplace</a></li>
+
                             </ul>
 
                             <h4 class="colTitle mtSection">Về chúng tôi</h4>
@@ -135,31 +134,19 @@
                         </div>
 
                         <div class="footerCol">
-                            <h4 class="colTitle">Tài khoản My Best Buy</h4>
+                            <h4 class="colTitle">Tài khoản</h4>
                             <ul class="colList">
-                                <li><a href="#">Trạng thái đơn hàng</a></li>
-                                <li><a href="#">Quản lý tài khoản</a></li>
-                                <li><a href="#">Trung tâm tùy chỉnh</a></li>
-                                <li><a href="#">Yêu cầu thông tin cá nhân</a></li>
+
                             </ul>
 
                             <h4 class="colTitle mtSection">Hợp tác với chúng tôi</h4>
-                            <ul class="colList">
-                                <li><a href="#">Quảng cáo với Best Buy</a></li>
-                                <li><a href="#">Trở thành đối tác liên kết</a></li>
-                                <li><a href="#">Bán hàng trên Best Buy Marketplace</a></li>
-                            </ul>
+
                         </div>
 
                         <div class="footerCol">
                             <h4 class="colTitle">Dịch vụ</h4>
                             <ul class="colList">
-                                <li><a href="#">Geek Squad</a></li>
-                                <li><a href="#">Hội viên Best Buy</a></li>
-                                <li><a href="#">Bảo vệ Best Buy</a></li>
-                                <li><a href="#">Gói đăng ký hàng tháng</a></li>
-                                <li><a href="#">Trả góp Best Buy</a></li>
-                                <li><a href="#">Chương trình Thu cũ đổi mới</a></li>
+
                             </ul>
 
                             <h4 class="colTitle mtSection">Ứng dụng di động</h4>
@@ -191,20 +178,7 @@
                     </div>
                 </div>
 
-                <div class="footerBottom">
-                    <p class="copyrightText">© Best Buy Canada Ltd. Suite #102, 425 West 6th Avenue, Vancouver, BC V5Y 1L3</p>
-                    <ul class="legalLinks">
-                        <li><a href="#">Điều khoản & Điều kiện</a></li>
-                        <li><a href="#">Điều kiện sử dụng</a></li>
-                        <li><a href="#">Chính sách trực tuyến</a></li>
-                        <li><a href="#">Chính sách bảo mật</a></li>
-                        <li><a href="#">Chính sách Cookie</a></li>
-                        <li><a href="#">Chính sách tiếp cận</a></li>
-                        <li><a href="#">Điều khoản & Điều kiện Geek Squad</a></li>
-                        <li><a href="#">Thu hồi sản phẩm</a></li>
-                        <li><a href="#">Tín dụng</a></li>
-                    </ul>
-                </div>
+
             </div>
         </footer>
     </div>
