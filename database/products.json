@@ -1,55 +1,5 @@
 [
-    {
-        "id": 1,
-        "name": "Samsung Galaxy Tab A11+ (Plus)",
-        "slug": "samsung-galaxy-tab-a11-plus",
-        "code": "SM-X230NZAAXAC",
-        "price": 269.99,
-        "images": [
-            "https:\/\/cdn11.dienmaycholon.vn\/filewebdmclnew\/DMCL21\/Picture\/\/Apro\/Apro_product_37067\/samsung-galaxy-tab-a11-4gb64gb-main-328261.webp",
-            "https:\/\/cdn11.dienmaycholon.vn\/filewebdmclnew\/DMCL21\/Picture\/\/Apro\/Apro_product_37688\/samsung-galaxy-s26-ultra-5g-12gb256gb-main--502.png",
-            "https:\/\/cdn11.dienmaycholon.vn\/filewebdmclnew\/DMCL21\/Picture\/\/Apro\/Apro_color_2823\/samsung-galaxy-_main_458_1020.png.webp"
-        ],
-        "overview": "Stay productive and entertained on the go with the Samsung Galaxy Tab A11+ (Plus) Android tablet. Its MediaTek MT8775 processor and 6GB memory deliver fast, seamless performance. From playlists to movies, Dolby-engineered quad speakers offer crisp, clear, and engaging audio that draws you in.",
-        "description": "The Samsung Galaxy Tab A11+ is designed for versatility, whether for work or play. With a bright, clear display and powerful audio, it's perfect for media consumption.",
-        "category": "may-tinh-bang",
-        "quantity": 149,
-        "rating": 4.8
-    },
-    {
-        "id": 2,
-        "name": "MacBook Pro 16",
-        "slug": "macbook-pro-16",
-        "code": "MBP16-2019",
-        "price": 749.77,
-        "images": [
-            "https:\/\/pisces.bbystatic.com\/image2\/BestBuy_US\/images\/products\/6418\/6418601_sd.jpg;maxHeight=300;maxWidth=300",
-            "https:\/\/pisces.bbystatic.com\/image2\/BestBuy_US\/images\/products\/6418\/6418601_sd.jpg;maxHeight=300;maxWidth=300",
-            "https:\/\/pisces.bbystatic.com\/image2\/BestBuy_US\/images\/products\/6418\/6418601_sd.jpg;maxHeight=300;maxWidth=300"
-        ],
-        "overview": "The 16-inch MacBook Pro delivers powerful performance for demanding creative workflows, featuring high-end processing, advanced thermal management, and a stunning Retina display.",
-        "description": "Experience professional-grade power in a portable form factor with the MacBook Pro 16.",
-        "category": "laptop",
-        "quantity": 123,
-        "rating": 4.1
-    },
-    {
-        "id": 3,
-        "name": "Dell 15.6 Laptop",
-        "slug": "dell-15-6-laptop",
-        "code": "DELL156-BLK",
-        "price": 549.99,
-        "images": [
-            "https:\/\/pisces.bbystatic.com\/image2\/BestBuy_US\/images\/products\/6535\/6535329_sd.jpg;maxHeight=300;maxWidth=300",
-            "https:\/\/via.placeholder.com\/480x360\/333\/fff?text=Dell+2",
-            "https:\/\/via.placeholder.com\/480x360\/333\/fff?text=Dell+3"
-        ],
-        "overview": "Reliable and efficient, this Dell 15.6 inch laptop is perfect for daily tasks, student projects, or business needs, offering a balanced mix of performance and portability.",
-        "description": "A versatile laptop designed to handle your daily computing needs with ease.",
-        "category": "laptop",
-        "quantity": 195,
-        "rating": 3.6
-    },
+    
     {
         "id": 4,
         "name": "Samsung 65\" 4K UHD HDR Smart TV",
@@ -225,7 +175,7 @@
         "code": "MAP14S1TBL",
         "price": 499.99,
         "images": [
-            "https:\/\/images.unsplash.com\/photo-1617103996702-96ff29b1c467?w=300&q=80"
+            "https://emarket.com.vn/media/product/2745_dieu_hoa_casper_sc09fs36.png"
         ],
         "overview": "Portable comfort with 3-in-1 functionality (Cool, Fan, Dehumidifier).",
         "description": "Easy installation kit included for sliding or double-hung windows.",
@@ -240,7 +190,7 @@
         "code": "DVE50R5400W",
         "price": 899.99,
         "images": [
-            "https:\/\/images.unsplash.com\/photo-1517677208171-0bc6725a3e60?w=300&q=80"
+            "https://emarket.com.vn/media/product/3070_may_hut_am_casper_de_12l1.jpg"
         ],
         "overview": "Steam sanitize+ cycle removes 99.9% of germs and bacteria.",
         "description": "Sensor drying prevents over-drying and protects fabric quality.",
@@ -255,7 +205,7 @@
         "code": "DLE4000W",
         "price": 949.99,
         "images": [
-            "https:\/\/images.unsplash.com\/photo-1517677208171-0bc6725a3e60?w=300&q=80"
+            "https://cdnv2.tgdd.vn/mwg-static/dmx/Products/Images/2202/368078/may-say-bom-nhiet-lg-11-kg-rx11vhp5s-thumb-639167030860520446-600x600.jpg"
         ],
         "overview": "AI technology selects optimal drying settings automatically.",
         "description": "Large capacity gas dryer with sleek tempered glass door.",
@@ -270,7 +220,7 @@
         "code": "WED4815EW",
         "price": 699.99,
         "images": [
-            "https:\/\/images.unsplash.com\/photo-1517677208171-0bc6725a3e60?w=300&q=80"
+            "https://emarket.com.vn/media/product/3070_may_hut_am_casper_de_12l1.jpg"
         ],
         "overview": "AutoDry drying system senses when clothes have reached the right moisture content.",
         "description": "Wrinkle Shield option helps keep wrinkles from setting into clean clothes.",

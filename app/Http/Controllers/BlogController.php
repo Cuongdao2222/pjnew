@@ -2,173 +2,162 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\CartService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use App\Services\CartService;
 
-class BlogController extends Controller
-{
-    protected $cartService;
+class BlogController extends Controller {
+	protected $cartService;
 
-    public function __construct(CartService $cartService)
-    {
-        $this->cartService = $cartService;
-    }
+	public function __construct(CartService $cartService) {
+		$this->cartService = $cartService;
+	}
 
-    private function getProducts()
-    {
-        $path = database_path('products.json');
-        if (!File::exists($path)) {
-            return [];
-        }
-        return json_decode(File::get($path), true);
-    }
+	private function getProducts() {
+		$path = database_path('products.json');
+		if (!File::exists($path)) {
+			return [];
+		}
+		return json_decode(File::get($path), true);
+	}
 
-    private function getCategories()
-    {
-        $path = database_path('categories.json');
-        if (!File::exists($path)) {
-            $pathAlt = database_path('category.json');
-            if (File::exists($pathAlt)) {
-                $path = $pathAlt;
-            } else {
-                return [];
-            }
-        }
-        return json_decode(File::get($path), true);
-    }
+	private function getCategories() {
+		$path = database_path('categories.json');
+		if (!File::exists($path)) {
+			$pathAlt = database_path('category.json');
+			if (File::exists($pathAlt)) {
+				$path = $pathAlt;
+			} else {
+				return [];
+			}
+		}
+		return json_decode(File::get($path), true);
+	}
 
-    private function getProductsByFlag($flag)
-    {
-        $products = $this->getProducts();
-        $flags = config('product_flags', []);
-        $targetIds = $flags[$flag] ?? [];
-        
-        if (empty($targetIds)) {
-            return [];
-        }
+	private function getProductsByFlag($flag) {
+		$products = $this->getProducts();
+		$flags = config('product_flags', []);
+		$targetIds = $flags[$flag] ?? [];
 
-        $filtered = [];
-        foreach ($products as $p) {
-            if (in_array($p['id'], $targetIds)) {
-                $filtered[] = $p;
-            }
-        }
-        return $filtered;
-    }
+		if (empty($targetIds)) {
+			return [];
+		}
 
-    public function index()
-    {
-        $products = $this->getProducts();
-        $categories = $this->getCategories();
-        $exclusiveProducts = $this->getProductsByFlag('exclusive');
-        $newProducts = $this->getProductsByFlag('new');
-        $hotProducts = $this->getProductsByFlag('hot');
+		$filtered = [];
+		foreach ($products as $p) {
+			if (in_array($p['id'], $targetIds)) {
+				$filtered[] = $p;
+			}
+		}
+		return $filtered;
+	}
 
-        return view('index', compact('products', 'categories', 'exclusiveProducts', 'newProducts', 'hotProducts'));
-    }
+	public function index() {
+		$products = $this->getProducts();
+		$categories = $this->getCategories();
 
-    public function category($slug = null)
-    {
-        $allProducts = $this->getProducts();
-        $categories = $this->getCategories();
-        $products = [];
+		$exclusiveProducts = $this->getProductsByFlag('exclusive');
+		$newProducts = $this->getProductsByFlag('new');
+		$hotProducts = $this->getProductsByFlag('hot');
 
-        if ($slug) {
-            foreach ($allProducts as $p) {
-                if (isset($p['category']) && $p['category'] == $slug) {
-                    $products[] = $p;
-                }
-            }
-        } else {
-            if (count($categories) > 0) {
-                $slug = $categories[0]['slug'];
-                foreach ($allProducts as $p) {
-                    if (isset($p['category']) && $p['category'] == $slug) {
-                        $products[] = $p;
-                    }
-                }
-            }
-            if (empty($products)) {
-                $products = $allProducts;
-            }
-        }
+		return view('index', compact('products', 'categories', 'exclusiveProducts', 'newProducts', 'hotProducts'));
+	}
 
-        return view('category', compact('products', 'categories', 'slug'));
-    }
+	public function category($slug = null) {
+		$allProducts = $this->getProducts();
+		$categories = $this->getCategories();
+		$products = [];
 
-    public function detail($slug = null)
-    {
-        $products = $this->getProducts();
-        $product = null;
+		if ($slug) {
+			foreach ($allProducts as $p) {
+				if (isset($p['category']) && $p['category'] == $slug) {
+					$products[] = $p;
+				}
+			}
+		} else {
+			if (count($categories) > 0) {
+				$slug = $categories[0]['slug'];
+				foreach ($allProducts as $p) {
+					if (isset($p['category']) && $p['category'] == $slug) {
+						$products[] = $p;
+					}
+				}
+			}
+			if (empty($products)) {
+				$products = $allProducts;
+			}
+		}
 
-        if ($slug) {
-            foreach ($products as $p) {
-                if (isset($p['slug']) && $p['slug'] == $slug) {
-                    $product = $p;
-                    break;
-                }
-            }
-        }
+		return view('category', compact('products', 'categories', 'slug'));
+	}
 
-        if (!$product && count($products) > 0) {
-            $product = $products[0]; // Fallback to first product
-        }
+	public function detail($slug = null) {
+		$products = $this->getProducts();
+		$product = null;
 
-        return view('detail', compact('product'));
-    }
+		if ($slug) {
+			foreach ($products as $p) {
+				if (isset($p['slug']) && $p['slug'] == $slug) {
+					$product = $p;
+					break;
+				}
+			}
+		}
 
-    public function suggest(Request $request)
-    {
-        $query = $request->get('query');
-        $products = $this->getProducts();
-        $suggestions = [];
+		if (!$product && count($products) > 0) {
+			$product = $products[0]; // Fallback to first product
+		}
 
-        if ($query) {
-            foreach ($products as $p) {
-                if (stripos($p['code'], $query) !== false || stripos($p['name'], $query) !== false) {
-                    $suggestions[] = [
-                        'code' => $p['code'],
-                        'name' => $p['name'],
-                        'slug' => $p['slug'],
-                        'image' => $p['images'][0]
-                    ];
-                }
-            }
-        }
+		return view('detail', compact('product'));
+	}
 
-        return response()->json($suggestions);
-    }
+	public function suggest(Request $request) {
+		$query = $request->get('query');
+		$products = $this->getProducts();
+		$suggestions = [];
 
-    public function viewCart()
-    {
-        $items = $this->cartService->getItems();
-        return view('cart', compact('items'));
-    }
+		if ($query) {
+			foreach ($products as $p) {
+				if (stripos($p['code'], $query) !== false || stripos($p['name'], $query) !== false) {
+					$suggestions[] = [
+						'code' => $p['code'],
+						'name' => $p['name'],
+						'slug' => $p['slug'],
+						'image' => $p['images'][0],
+					];
+				}
+			}
+		}
 
-    public function addToCart(Request $request)
-    {
-        $id = $request->input('id');
-        $products = $this->getProducts();
-        $product = null;
-        
-        foreach ($products as $p) {
-            if ($p['id'] == $id) {
-                $product = $p;
-                break;
-            }
-        }
+		return response()->json($suggestions);
+	}
 
-        if ($product) {
-            $count = $this->cartService->add($product);
-            return response()->json(['success' => true, 'cart_count' => $count]);
-        }
-        
-        return response()->json(['success' => false], 404);
-    }
+	public function viewCart() {
+		$items = $this->cartService->getItems();
+		return view('cart', compact('items'));
+	}
 
-    public function getCartCount()
-    {
-        return response()->json(['count' => $this->cartService->getCount()]);
-    }
+	public function addToCart(Request $request) {
+		$id = $request->input('id');
+		$products = $this->getProducts();
+		$product = null;
+
+		foreach ($products as $p) {
+			if ($p['id'] == $id) {
+				$product = $p;
+				break;
+			}
+		}
+
+		if ($product) {
+			$count = $this->cartService->add($product);
+			return response()->json(['success' => true, 'cart_count' => $count]);
+		}
+
+		return response()->json(['success' => false], 404);
+	}
+
+	public function getCartCount() {
+		return response()->json(['count' => $this->cartService->getCount()]);
+	}
 }

@@ -68,17 +68,5 @@
         "tên": "Máy hút bụi",
         "đường dẫn ảnh": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=300&q=80",
         "slug": "may-hut-bui"
-    },
-    {
-        "id": 9,
-        "tên": "Máy tính bảng",
-        "đường dẫn ảnh": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300&q=80",
-        "slug": "may-tinh-bang"
-    },
-    {
-        "id": 10,
-        "tên": "Laptop",
-        "đường dẫn ảnh": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&q=80",
-        "slug": "laptop"
     }
 ]

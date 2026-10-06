@@ -121,9 +121,12 @@
         <h2 class="categorySectionTitle">Mua sắm theo danh mục</h2>
 
         <!-- Grid danh mục từ categories.json -->
+
+
         <div class="categoryGrid">
             @if(isset($categories) && count($categories) > 0)
                 @foreach($categories as $category)
+
                 <a href="{{ url('/category/' . $category['slug']) }}" class="categoryItem">
                     <div class="categoryImgBox">
                         <img src="{{ $category['đường dẫn ảnh'] }}" alt="{{ $category['tên'] }}">
